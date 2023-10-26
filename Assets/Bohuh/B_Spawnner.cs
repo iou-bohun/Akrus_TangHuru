@@ -21,10 +21,12 @@ public class B_Spawnner : MonoBehaviour
         while (curSpawnPoint == null)
         {
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            if (randomSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
+            
+          if (randomSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
             {
                 curSpawnPoint = randomSpawnPoint;
             }
+           
         }
         if (curSpawnPoint != null)
         {

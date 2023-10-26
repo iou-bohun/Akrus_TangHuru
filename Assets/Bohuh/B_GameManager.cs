@@ -35,7 +35,7 @@ public class B_GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            isStrawberryReady=true;
+            isStrawberryReady=!isStrawberryReady;
         }
     }
 }
