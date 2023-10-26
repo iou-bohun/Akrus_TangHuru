@@ -5,6 +5,7 @@ using UnityEngine;
 public class B_Spawnner : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPoints;
+    [SerializeField] List<GameObject> spawnPointsList;
     B_SpawnManager spawnManager;
 
     private void Awake()
@@ -16,8 +17,16 @@ public class B_Spawnner : MonoBehaviour
 
    public  void Spawn()
     {
-        Transform curSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        if (curSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
+        Transform curSpawnPoint = null;
+        while (curSpawnPoint == null)
+        {
+            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            if (randomSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
+            {
+                curSpawnPoint = randomSpawnPoint;
+            }
+        }
+        if (curSpawnPoint != null)
         {
             GameObject tangHuru = spawnManager.Get(0);
             tangHuru.transform.position = curSpawnPoint.position;
