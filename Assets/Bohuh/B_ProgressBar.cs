@@ -11,14 +11,15 @@ public class B_ProgressBar : MonoBehaviour
     [SerializeField] TextMeshProUGUI time;
 
     // 손질에 걸리는 시간
-    private float maxTime = 30;
+    [SerializeField] float maxTime = 4;
     // 현재 손질하기 남은 시간
-    private float curTime = 30;
+    private float curTime;
     // 손질중인가요
     private bool isPrepping = true;
 
     private void Start()
     {
+        curTime = maxTime;
         progressBar.value = (float) curTime / (float) maxTime;
     }
 
@@ -31,6 +32,7 @@ public class B_ProgressBar : MonoBehaviour
             time.text = (((int)curTime % 60).ToString() + "s");
             ProgerssBarZero();
             HandleBar();
+            spawnTang();
         }
     }
 
@@ -41,7 +43,7 @@ public class B_ProgressBar : MonoBehaviour
     {
         if (curTime <= 0.1)
         {
-            curTime = 0;
+            curTime = maxTime;
             isPrepping = false;
             progressBar.gameObject.SetActive(false);
         }
@@ -62,5 +64,14 @@ public class B_ProgressBar : MonoBehaviour
     void HandleBar()
     {
         progressBar.value = (float) curTime / ((float) maxTime);
+    }
+
+    void spawnTang()
+    {
+        if(isPrepping == false)
+        {
+            FindAnyObjectByType<B_Spawnner>().Spawn();
+            isPrepping = true;
+        }
     }
 }
