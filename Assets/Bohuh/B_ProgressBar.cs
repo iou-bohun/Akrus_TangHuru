@@ -31,6 +31,7 @@ public class B_ProgressBar : MonoBehaviour
             time.text = (((int)curTime % 60).ToString() + "s");
             ProgerssBarZero();
             HandleBar();
+            spawnTang();
         }
     }
 
@@ -41,7 +42,7 @@ public class B_ProgressBar : MonoBehaviour
     {
         if (curTime <= 0.1)
         {
-            curTime = 0;
+            curTime = 30;
             isPrepping = false;
             progressBar.gameObject.SetActive(false);
         }
@@ -62,5 +63,14 @@ public class B_ProgressBar : MonoBehaviour
     void HandleBar()
     {
         progressBar.value = (float) curTime / ((float) maxTime);
+    }
+
+    void spawnTang()
+    {
+        if(isPrepping == false)
+        {
+            FindAnyObjectByType<B_Spawnner>().Spawn();
+            isPrepping = true;
+        }
     }
 }
