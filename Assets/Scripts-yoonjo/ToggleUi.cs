@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SwitchToggle : MonoBehaviour
+public class ToggleUi : MonoBehaviour
 {
     [SerializeField] RectTransform uiHandleRectTransform;
     [SerializeField] Color backgroundActiveColor;

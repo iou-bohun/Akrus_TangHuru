@@ -3184,11 +3184,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 887348989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c5becc69c3fb43972c317f787dd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 1921261481}
-  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6156863, a: 1}
+  backgroundActiveColor: {r: 0.7019608, g: 1, b: 0.8039216, a: 1}
   handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &929064998
 GameObject:
@@ -3376,11 +3376,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 945202923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c5becc69c3fb43972c317f787dd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 788607390}
-  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6156863, a: 1}
+  backgroundActiveColor: {r: 0.7019608, g: 1, b: 0.8039216, a: 1}
   handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &969756932
 GameObject:
@@ -3400,7 +3400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &969756933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6663,11 +6663,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854781139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c5becc69c3fb43972c317f787dd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 251375931}
-  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6149417, a: 1}
+  backgroundActiveColor: {r: 0.7028302, g: 1, b: 0.80266494, a: 1}
   handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &1867679036
 GameObject:
