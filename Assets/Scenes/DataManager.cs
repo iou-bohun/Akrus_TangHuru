@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class DataManager : MonoBehaviour
 {
-   private static GameManager instance;
-    
+    private static DataManager instance;
 
-   
+    public int strawberry;
+    public int starwberryTangHuru;
+    public int gold;
+    public int ruby;
+
     private void Awake()
     {
         if (instance == null)
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static GameManager Instance
+    public static DataManager Instance
     {
         get
         {
@@ -33,4 +35,6 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
+
+    
 }
