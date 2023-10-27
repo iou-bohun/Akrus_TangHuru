@@ -5,13 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    void Start()
+   private static GameManager instance;
+   
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void Update()
+    public static GameManager Instance
     {
-        
+        get
+        {
+            if (null == instance)
+            {
+                return null;
+            }
+            return instance;
+        }
     }
 }
