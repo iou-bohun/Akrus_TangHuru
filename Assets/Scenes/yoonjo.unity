@@ -3098,7 +3098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887348990}
   - component: {fileID: 887348992}
-  - component: {fileID: 887348991}
+  - component: {fileID: 887348993}
   m_Layer: 5
   m_Name: "\uD6A8\uACFC\uC74C"
   m_TagString: Untagged
@@ -3127,21 +3127,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000038146973, y: -100}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &887348991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887348989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7895acbbc01c71b468575fd7131abcc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiHandleRectTransform: {fileID: 1921261481}
-  backgroundActiveColor: {r: 0.59474015, g: 0.9339623, b: 0.7098889, a: 1}
-  handleActiveColor: {r: 0.45545566, g: 0.69435126, b: 0.8396226, a: 1}
 --- !u!114 &887348992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3190,6 +3175,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &887348993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887348989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiHandleRectTransform: {fileID: 1921261481}
+  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6156863, a: 1}
+  handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &929064998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,7 +3290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945202924}
   - component: {fileID: 945202926}
-  - component: {fileID: 945202925}
+  - component: {fileID: 945202927}
   m_Layer: 5
   m_Name: "\uC9C4\uB3D9"
   m_TagString: Untagged
@@ -3319,21 +3319,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000038146973, y: -200}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &945202925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945202923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7895acbbc01c71b468575fd7131abcc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiHandleRectTransform: {fileID: 788607390}
-  backgroundActiveColor: {r: 0.59474015, g: 0.9339623, b: 0.7098889, a: 1}
-  handleActiveColor: {r: 0.45545566, g: 0.69435126, b: 0.8396226, a: 1}
 --- !u!114 &945202926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3382,6 +3367,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &945202927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945202923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiHandleRectTransform: {fileID: 788607390}
+  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6156863, a: 1}
+  handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &969756932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &969756933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3751,7 +3751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6d8d9502a0abe4f8bf32db843842a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupWindow: {fileID: 1352521464}
+  popupWindow: {fileID: 969756934}
 --- !u!1 &1012749271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,7 +4721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1352521463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5177,7 +5177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6d8d9502a0abe4f8bf32db843842a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupWindow: {fileID: 969756934}
+  popupWindow: {fileID: 1352521464}
 --- !u!1 &1514835037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6663,12 +6663,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854781139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7895acbbc01c71b468575fd7131abcc4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4548f1c1e7bee1e46992eefd0a08ac7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 251375931}
-  backgroundActiveColor: {r: 0.59474015, g: 0.9339623, b: 0.7098889, a: 1}
-  handleActiveColor: {r: 0.45545566, g: 0.69435126, b: 0.8396226, a: 1}
+  backgroundActiveColor: {r: 0.6039216, g: 0.8784314, b: 0.6149417, a: 1}
+  handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &1867679036
 GameObject:
   m_ObjectHideFlags: 0
