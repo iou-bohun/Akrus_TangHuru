@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/DataManager.cs.meta
 guid: d5f5b122906403a47a5af095c5c7a21d
+========
+guid: 7895acbbc01c71b468575fd7131abcc4
+>>>>>>>> yoonjo:Assets/Scripts-yoonjo/SwitchToggle.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

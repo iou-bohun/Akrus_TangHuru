@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
@@ -8,7 +9,9 @@ public class DataManager : MonoBehaviour
 
     public int strawberry;
     public int starwberryTangHuru;
-    public int gold;
+    [SerializeField] int startingGold = 150;
+    [SerializeField] int currentGold;
+    [SerializeField] TextMeshProUGUI displayGold;
     public int ruby;
 
     private void Awake()
@@ -22,6 +25,7 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        currentGold = startingGold;
     }
 
     public static DataManager Instance
@@ -35,6 +39,33 @@ public class DataManager : MonoBehaviour
             return instance;
         }
     }
+    private void Update()
+    {
+        UpdateDisplay();
+    }
 
-    
+    /// <summary>
+    /// 골드 증가
+    /// </summary>
+    /// <param name="mount">  mount만큼 골드 증가</param>
+    public void Deposit(int mount)
+    {
+        currentGold += Mathf.Abs(mount);
+    }
+    /// <summary>
+    ///  골드 감소
+    /// </summary>
+    /// <param name="mount">mount만큼 골드 감소</param>
+    public void Withdraw(int mount)
+    {
+        currentGold -= Mathf.Abs(mount);
+    }
+
+    /// <summary>
+    /// 골드 디스플레이 
+    /// </summary>
+    void UpdateDisplay()
+    {
+        displayGold.text = "Gold:" + currentGold;
+    }
 }

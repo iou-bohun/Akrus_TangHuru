@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/DataManager.cs.meta
+guid: b671aaa61e2e22f48b3f36292d85f5f3
+========
+guid: 7895acbbc01c71b468575fd7131abcc4
+>>>>>>>> yoonjo:Assets/Scripts-yoonjo/SwitchToggle.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
