@@ -1,4 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+=======
+<<<<<<<< HEAD:Assets/Scenes/DataManager.cs.meta
+guid: 4548f1c1e7bee1e46992eefd0a08ac7a
+========
+>>>>>>> Stashed changes
 guid: 7895acbbc01c71b468575fd7131abcc4
 MonoImporter:
   externalObjects: {}
