@@ -68,5 +68,4 @@ public class DataManager : MonoBehaviour
     {
         displayGold.text = "Gold:" + currentGold;
     }
-
 }
