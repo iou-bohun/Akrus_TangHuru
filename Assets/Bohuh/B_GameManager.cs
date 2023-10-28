@@ -6,6 +6,7 @@ public class B_GameManager : MonoBehaviour
 {
     private static B_GameManager instance;
     public bool isStrawberryReady = false;
+    public B_RestingContainer restingContainer;
 
     private void Awake()
     {

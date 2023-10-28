@@ -42,7 +42,7 @@ public class Y_TimebarController : MonoBehaviour
             float deltaTime = realTimeNow - lastRealTime;
             lastRealTime = realTimeNow;
 
-            currentTime -= Time.deltaTime * 3.0f; // 가속 버튼을 누를 때 시간을 3초씩 감소
+             // 가속 버튼을 누를 때 시간을 3초씩 감소
             UpdateProgressBar();
         }
     }
