@@ -43,15 +43,15 @@ public class B_TangHuru : MonoBehaviour
     private void OnMouseUp()
     {
         ///탕후루와 구치소가 충돌한 경우 
-        if(Mathf.Abs(this.transform.localPosition.x - targetConrainer.transform.localPosition.x)<=0.5f &&
-            Mathf.Abs(this.transform.localPosition.y - targetConrainer.transform.localPosition.y) <= 0.5f)
+        if(Mathf.Abs(this.transform.position.x - targetConrainer.transform.position.x)<=0.5f &&
+            Mathf.Abs(this.transform.position.y - targetConrainer.transform.position.y) <= 0.5f)
         {
-            this.transform.localPosition = 
-                new Vector3(targetConrainer.transform.localPosition.x, targetConrainer.transform.localPosition.y, targetConrainer.transform.localPosition.z);
+            this.transform.position = 
+                new Vector3(targetConrainer.transform.position.x, targetConrainer.transform.position.y, targetConrainer.transform.position.z);
         }
         else
         {
-            this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
+            this.transform.position = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
         }
     }
    
