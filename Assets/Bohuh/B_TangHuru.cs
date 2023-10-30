@@ -6,6 +6,7 @@ using UnityEngine;
 public class B_TangHuru : MonoBehaviour
 {
     Transform targetConrainer;
+    Transform thisPosition;
     Vector3 mousePositionOffset;
     Vector3 resetPosition;
 
@@ -17,7 +18,9 @@ public class B_TangHuru : MonoBehaviour
     private void OnEnable()
     {
         targetConrainer = B_GameManager.Instance.restingContainer.GetComponent<Transform>();
+        thisPosition = B_Spawnner.Instance.randomSpawnPoint;
     }
+
     private Vector3 GetMouseWorldPosition()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -48,6 +51,10 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position = 
                 new Vector3(targetConrainer.transform.position.x, targetConrainer.transform.position.y, targetConrainer.transform.position.z);
+            DataManager.Instance.strawberryTangHuru++;
+            this.gameObject.SetActive(false);
+            Debug.Log("Gg");
+            thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
         else
         {

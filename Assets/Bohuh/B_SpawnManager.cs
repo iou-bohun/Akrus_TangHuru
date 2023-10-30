@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class B_SpawnManager : MonoBehaviour
 {
+    public static B_SpawnManager instance;  
     public GameObject[] prefabs;
     List<GameObject>[] pools;
 
@@ -33,7 +34,6 @@ public class B_SpawnManager : MonoBehaviour
             select = Instantiate(prefabs[index], transform);
             pools[index].Add(select);
         }
-
         return select;
     }
 }

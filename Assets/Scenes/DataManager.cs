@@ -8,10 +8,11 @@ public class DataManager : MonoBehaviour
     private static DataManager instance;
 
     public int strawberry;
-    public int starwberryTangHuru;
+    public int strawberryTangHuru = 0;
     [SerializeField] int startingGold = 150;
     [SerializeField] int currentGold;
     [SerializeField] TextMeshProUGUI displayGold;
+    [SerializeField] TextMeshProUGUI displayStarwberryTangHuru;
     public int ruby;
 
     private void Awake()
@@ -42,6 +43,7 @@ public class DataManager : MonoBehaviour
     private void Update()
     {
         UpdateDisplay();
+        UpdateStarawberryTangHuru(); 
     }
 
     /// <summary>
@@ -67,5 +69,10 @@ public class DataManager : MonoBehaviour
     void UpdateDisplay()
     {
         displayGold.text = "Gold:" + currentGold;
+    }
+
+    void UpdateStarawberryTangHuru()
+    {
+        displayStarwberryTangHuru.text = strawberryTangHuru.ToString();
     }
 }

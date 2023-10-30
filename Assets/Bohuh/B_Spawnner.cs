@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class B_Spawnner : MonoBehaviour
 {
+    private static B_Spawnner instance;
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] List<GameObject> spawnPointsList;
     B_SpawnManager spawnManager;
+    public Transform randomSpawnPoint;
 
     private void Awake()
     {
+        instance = this;
         spawnPoints = GetComponentsInChildren<Transform>();
         spawnManager = FindAnyObjectByType<B_SpawnManager>();
     }
 
+    public static B_Spawnner Instance
+    {
+        get
+        {
+            if (null == instance)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
 
    public  void Spawn()
     {
         Transform curSpawnPoint = null;
         while (curSpawnPoint == null)
         {
-            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             
           if (randomSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
             {
