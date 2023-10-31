@@ -8,17 +8,29 @@ public class B_TangHuru : MonoBehaviour
     Transform targetConrainer;
     Transform thisPosition;
     Vector3 mousePositionOffset;
+    Collider2D collide;
     Vector3 resetPosition;
-
-    private void Start()
+    bool isActive = false;
+    float curTime = 0f;
+    private void Awake()
     {
-        
+        collide = GetComponent<Collider2D>();
     }
 
     private void OnEnable()
     {
+        collide.enabled = false;
         targetConrainer = B_GameManager.Instance.restingContainer.GetComponent<Transform>();
         thisPosition = B_Spawnner.Instance.randomSpawnPoint;
+    }
+
+    private void Update()
+    {
+        curTime += Time.deltaTime;
+        if(curTime > 3f)
+        {
+            collide.enabled = true;   
+        }
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -31,7 +43,7 @@ public class B_TangHuru : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
-        mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+            mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
     }
     /// <summary>
     /// 마우스 드래그
@@ -53,7 +65,6 @@ public class B_TangHuru : MonoBehaviour
                 new Vector3(targetConrainer.transform.position.x, targetConrainer.transform.position.y, targetConrainer.transform.position.z);
             DataManager.Instance.strawberryTangHuru++;
             this.gameObject.SetActive(false);
-            Debug.Log("Gg");
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
         else
@@ -61,5 +72,4 @@ public class B_TangHuru : MonoBehaviour
             this.transform.position = thisPosition.transform.position;
         }
     }
-   
 }
