@@ -34,8 +34,7 @@ public class B_Spawnner : MonoBehaviour
         Transform curSpawnPoint = null;
         while (curSpawnPoint == null)
         {
-            randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            
+          randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
           if (randomSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable == true)
             {
                 curSpawnPoint = randomSpawnPoint;
