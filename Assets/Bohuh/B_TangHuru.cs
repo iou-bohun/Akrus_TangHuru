@@ -12,7 +12,7 @@ public class B_TangHuru : MonoBehaviour
 
     private void Start()
     {
-        resetPosition = this.transform.position;
+        
     }
 
     private void OnEnable()
@@ -58,7 +58,7 @@ public class B_TangHuru : MonoBehaviour
         }
         else
         {
-            this.transform.position = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
+            this.transform.position = thisPosition.transform.position;
         }
     }
    
