@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class ButtonHandler : MonoBehaviour
 {
+    public GameObject backgroundPanel;
+
     public PanelHandler popupWindow;
 
     public void OnButtonClick()
@@ -16,8 +18,8 @@ public class ButtonHandler : MonoBehaviour
         seq.Append(transform.DOScale(1f, 0.1f));
 
         seq.Play().OnComplete(() => {
+            backgroundPanel.SetActive(true);
             popupWindow.Show();
         });
     }
-
 }
