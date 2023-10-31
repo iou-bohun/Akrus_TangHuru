@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class CloseButtonHandler : MonoBehaviour
 {
+    public BackgroundPanelHandler backgroundPanel;
+
     public PanelHandler popupWindow;
 
     public void OnButtonClick()
@@ -17,6 +19,8 @@ public class CloseButtonHandler : MonoBehaviour
 
         seq.Play().OnComplete(() => {
             popupWindow.Hide();
+            backgroundPanel.Hide();
         });
+
     }
 }
