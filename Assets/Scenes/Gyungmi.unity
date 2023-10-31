@@ -1812,6 +1812,7 @@ GameObject:
   - component: {fileID: 624581928}
   - component: {fileID: 624581927}
   - component: {fileID: 624581926}
+  - component: {fileID: 624581929}
   m_Layer: 5
   m_Name: "\uAC00\uC18D"
   m_TagString: Untagged
@@ -1921,6 +1922,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624581924}
   m_CullTransparentMesh: 1
+--- !u!114 &624581929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624581924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb00b510627baf04fae47d94ee3b0cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 0}
+  time: {fileID: 0}
+  maxTime: 4
 --- !u!1 &639849541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,6 +2251,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723471461}
   m_CullTransparentMesh: 1
+--- !u!1 &733104409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733104411}
+  - component: {fileID: 733104410}
+  m_Layer: 0
+  m_Name: FruitSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &733104410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733104409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7cc86b23ddf745b1dee59082cb1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+  strawberryPrefab: {fileID: 3621998600057050079, guid: 40f6356f587509140a0b7f03f7740e23, type: 3}
+--- !u!4 &733104411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733104409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &769408655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,7 +2684,7 @@ GameObject:
   - component: {fileID: 788151941}
   m_Layer: 0
   m_Name: FruitSpawnPoint
-  m_TagString: Untagged
+  m_TagString: FruitSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2802,7 +2864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &806547940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8027,3 +8089,4 @@ SceneRoots:
   - {fileID: 2131521434}
   - {fileID: 2002814034}
   - {fileID: 788151941}
+  - {fileID: 733104411}
