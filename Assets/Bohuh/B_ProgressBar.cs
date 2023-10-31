@@ -17,15 +17,16 @@ public class B_ProgressBar : MonoBehaviour
     // 손질중인가요
     private bool isPrepping = true;
 
-    private void Start()
+
+    private void OnEnable()
     {
         curTime = maxTime;
-        progressBar.value = (float) curTime / (float) maxTime;
+        progressBar.value = (float)curTime / (float)maxTime;
     }
 
     private void Update()
     {
-        if(B_GameManager.Instance.isStrawberryReady== true)
+        if(DataManager.Instance.isFruitAvaliable ==true)
         {
             progressBar.gameObject.SetActive(true);
             curTime -= Time.deltaTime;
@@ -33,6 +34,11 @@ public class B_ProgressBar : MonoBehaviour
             ProgerssBarZero();
             HandleBar();
             spawnTang();
+        }
+        else
+        {
+            progressBar.gameObject.SetActive (false);
+            curTime = maxTime;
         }
     }
 

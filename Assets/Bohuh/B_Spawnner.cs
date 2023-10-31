@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class B_Spawnner : MonoBehaviour
 {
     private static B_Spawnner instance;
@@ -31,6 +32,7 @@ public class B_Spawnner : MonoBehaviour
 
    public  void Spawn()
     {
+        DataManager.Instance.SelectRandomFruit();
         Transform curSpawnPoint = null;
         while (curSpawnPoint == null)
         {
@@ -43,7 +45,7 @@ public class B_Spawnner : MonoBehaviour
         }
         if (curSpawnPoint != null)
         {
-            GameObject tangHuru = spawnManager.Get(0);
+            GameObject tangHuru = spawnManager.Get(((int)DataManager.Instance.selectedFruit));
             tangHuru.transform.position = curSpawnPoint.position;
             curSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable = false;
         }
