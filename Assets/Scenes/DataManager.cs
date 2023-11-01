@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
 
-    Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
+    [SerializeField] Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
         { FruitType.Strawberry,3},
         {FruitType.Grape,2},
@@ -63,9 +63,9 @@ public class DataManager : MonoBehaviour
         UpdateStarawberryTangHuru();
         CheckFruitCount();
         Debug.Log(isFruitAvaliable);
+        Test();
     }
 
-    
     /// <summary>
     /// 골드 증가
     /// </summary>
@@ -108,6 +108,7 @@ public class DataManager : MonoBehaviour
 
     public void SelectRandomFruit()
     {
+        avaliableFruits.Clear();
         foreach(var fruit in fruitCounts.Keys )
         {
             if (fruitCounts[fruit] > 0)
@@ -125,6 +126,14 @@ public class DataManager : MonoBehaviour
         else
         {
             Debug.Log("과일 없음");
+        }
+    }
+
+    void Test()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            fruitCounts[FruitType.orange]++;
         }
     }
 }
