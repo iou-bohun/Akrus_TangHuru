@@ -60,7 +60,7 @@ public class B_ProgressBar : MonoBehaviour
     /// </summary>
     public void AccelateTime()
     {
-        if (B_GameManager.Instance.isStrawberryReady == false) return;
+        if (DataManager.Instance.isFruitAvaliable == false) return;
         curTime -= 3f;
     }
 

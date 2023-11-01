@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
 
-    [SerializeField] Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
+    public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
         { FruitType.Strawberry,3},
         {FruitType.Grape,2},
@@ -63,7 +63,6 @@ public class DataManager : MonoBehaviour
         UpdateStarawberryTangHuru();
         CheckFruitCount();
         Debug.Log(isFruitAvaliable);
-        Test();
     }
 
     /// <summary>
@@ -129,11 +128,5 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    void Test()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            fruitCounts[FruitType.orange]++;
-        }
-    }
+   
 }
