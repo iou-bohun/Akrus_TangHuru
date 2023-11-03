@@ -8,13 +8,15 @@ public class FruitSpawner : MonoBehaviour
     public Transform[] points;
 
     // µþ±â ÇÁ¸®ÆÕ
-    public GameObject strawberryPrefab;
+    // public GameObject strawberryPrefab;
+    public GameObject[] fruits;
+    private List<GameObject> gameObject = new List<GameObject>();
 
     // µþ±â »ý¼º ÁÖ±â
     float createTime = 5f;
     // ÃÖ´ë °¹¼ö
     int maxNum = 8;
-    
+
     void Start()
     {
         points = GameObject.Find("FruitSpawnPoint").GetComponentsInChildren<Transform>();
@@ -27,8 +29,10 @@ public class FruitSpawner : MonoBehaviour
 
     IEnumerator SpawnFruit()
     {
-        while(true)
+        while (true)
         {
+            int selection = Random.Range(0, fruits.Length); // °úÀÏ ÇÁ¸®ÆÕ ·£´ý ¼±ÅÃ
+            GameObject selectedFruit = fruits[selection];
             int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
 
             if (fruitCount < maxNum)
@@ -37,8 +41,8 @@ public class FruitSpawner : MonoBehaviour
 
                 int idx = Random.Range(1, points.Length);
 
-                Instantiate(strawberryPrefab, points[idx].position, points[idx].rotation);
-
+                GameObject instance = Instantiate(selectedFruit, points[idx].position, points[idx].rotation);
+                gameObject.Add(instance);
             }
             else
             {
@@ -50,6 +54,6 @@ public class FruitSpawner : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 }
