@@ -90,11 +90,17 @@ public class DataManager : MonoBehaviour
         displayGold.text = "Gold:" + currentGold;
     }
 
+    /// <summary>
+    /// 구치소에 탕후루 수 디스플레이 
+    /// </summary>
     void UpdateStarawberryTangHuru()
     {
         displayStarwberryTangHuru.text = strawberryTangHuru.ToString();
     }
 
+    /// <summary>
+    /// 현제 보관소에 사용 가능한 과일이 있는지 확인 
+    /// </summary>
     void CheckFruitCount()
     {
         if (fruitCounts[FruitType.Strawberry]<=0 && fruitCounts[FruitType.Grape]<=0&&
@@ -105,28 +111,24 @@ public class DataManager : MonoBehaviour
         else { isFruitAvaliable = true; }
     }
 
+    /// <summary>
+    /// 사용가능한 과일을 랜덤으로 선택
+    /// </summary>
     public void SelectRandomFruit()
     {
         avaliableFruits.Clear();
-        foreach(var fruit in fruitCounts.Keys )
+        foreach(var fruit in fruitCounts.Keys ) //어떠한 과일이 보관되어있나 
         {
-            if (fruitCounts[fruit] > 0)
+            if (fruitCounts[fruit] > 0)  //과일이 1개 이상 보관되어있다면 
             {
-                avaliableFruits.Add(fruit);
+                avaliableFruits.Add(fruit); // 사용가능한 과일에 그 과일의 종류를 추가 
             }
         }
-        if(avaliableFruits.Count > 0)
+        if(avaliableFruits.Count > 0) // 사용 가능한  과일의 종류가 있다면 
         {
             int randomIndex = Random.Range(0, avaliableFruits.Count);
-            selectedFruit = avaliableFruits[randomIndex];
-            fruitCounts[selectedFruit]--;
-            Debug.Log(selectedFruit + "남은 개수 : " + fruitCounts[selectedFruit]);
-        }
-        else
-        {
-            Debug.Log("과일 없음");
+            selectedFruit = avaliableFruits[randomIndex]; // 과일의 종류 랜덤으로 선택 
+            fruitCounts[selectedFruit]--; // 선택된 과일의 수 감소 
         }
     }
-
-   
 }
