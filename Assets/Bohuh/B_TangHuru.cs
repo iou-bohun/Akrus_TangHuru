@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class B_TangHuru : MonoBehaviour
 {
-    Transform targetConrainer;
+    [SerializeField] int thisTangHuru;
+    Transform strawberryContainer;
+    Transform grapeContainer;
+    Transform orangeContainer;
+    Transform pineappleContainer;
+    Transform blueberryContainer;
     Transform thisPosition;
+
     Vector3 mousePositionOffset;
     Collider2D collide;
-    Vector3 resetPosition;
-    bool isActive = false;
     float curTime = 0f;
     private void Awake()
     {
@@ -19,8 +23,13 @@ public class B_TangHuru : MonoBehaviour
 
     private void OnEnable()
     {
+        thisTangHuru = (int)DataManager.Instance.selectedFruit;
         collide.enabled = false;
-        targetConrainer = B_GameManager.Instance.restingContainer.GetComponent<Transform>();
+        strawberryContainer = B_GameManager.Instance.strawberryContainer.GetComponent<Transform>();
+        grapeContainer = B_GameManager.Instance.grapeContainer.GetComponent<Transform>();
+        orangeContainer = B_GameManager.Instance.orangeContaner.GetComponent<Transform>();
+        pineappleContainer = B_GameManager.Instance.pineappleContainer.GetComponent<Transform>();
+        blueberryContainer = B_GameManager.Instance.blueberryContainer.GetComponent<Transform>();
         thisPosition = B_Spawnner.Instance.randomSpawnPoint;
     }
 
@@ -58,12 +67,48 @@ public class B_TangHuru : MonoBehaviour
     private void OnMouseUp()
     {
         ///탕후루와 구치소가 충돌한 경우 
-        if(Mathf.Abs(this.transform.position.x - targetConrainer.transform.position.x)<=0.5f &&
-            Mathf.Abs(this.transform.position.y - targetConrainer.transform.position.y) <= 0.5f)
+        if (Mathf.Abs(this.transform.position.x - strawberryContainer.transform.position.x) <= 0.5f &&
+            Mathf.Abs(this.transform.position.y - strawberryContainer.transform.position.y) <= 0.5f && thisTangHuru == 0)
         {
             this.transform.position = 
-                new Vector3(targetConrainer.transform.position.x, targetConrainer.transform.position.y, targetConrainer.transform.position.z);
+                new Vector3(strawberryContainer.transform.position.x, strawberryContainer.transform.position.y, strawberryContainer.transform.position.z);
             DataManager.Instance.strawberryTangHuru++;
+            this.gameObject.SetActive(false);
+            thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
+        }
+        else if(Mathf.Abs(this.transform.position.x - grapeContainer.transform.position.x) <= 0.5f &&
+            Mathf.Abs(this.transform.position.y - grapeContainer.transform.position.y) <= 0.5f && thisTangHuru == 1)
+        {
+            this.transform.position =
+                new Vector3(grapeContainer.transform.position.x, grapeContainer.transform.position.y, grapeContainer.transform.position.z);
+            DataManager.Instance.grapeTangHuru++;
+            this.gameObject.SetActive(false);
+            thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
+        }
+        else if(Mathf.Abs(this.transform.position.x - orangeContainer.transform.position.x) <= 0.5f &&
+            Mathf.Abs(this.transform.position.y - orangeContainer.transform.position.y) <= 0.5f && thisTangHuru == 2)
+        {
+            this.transform.position =
+                new Vector3(orangeContainer.transform.position.x, orangeContainer.transform.position.y, orangeContainer.transform.position.z);
+            DataManager.Instance.orangeTangHuru++;
+            this.gameObject.SetActive(false);
+            thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
+        }
+        else if(Mathf.Abs(this.transform.position.x - pineappleContainer.transform.position.x) <= 0.5f &&
+            Mathf.Abs(this.transform.position.y - pineappleContainer.transform.position.y) <= 0.5f && thisTangHuru == 3)
+        {
+            this.transform.position =
+                new Vector3(pineappleContainer.transform.position.x, pineappleContainer.transform.position.y, pineappleContainer.transform.position.z);
+            DataManager.Instance.pineappleTangHuru++;
+            this.gameObject.SetActive(false);
+            thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
+        }
+        else if(Mathf.Abs(this.transform.position.x - blueberryContainer.transform.position.x) <= 0.5f &&
+            Mathf.Abs(this.transform.position.y - blueberryContainer.transform.position.y) <= 0.5f && thisTangHuru == 4)
+        {
+            this.transform.position =
+                new Vector3(blueberryContainer.transform.position.x, blueberryContainer.transform.position.y, blueberryContainer.transform.position.z);
+            DataManager.Instance.blueberryTangHuru++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }

@@ -7,7 +7,9 @@ public enum FruitType
 {
     Strawberry,
     Grape,
-    orange
+    orange,
+    pineapple,
+    blueberry
 }
 
 public class DataManager : MonoBehaviour
@@ -16,17 +18,27 @@ public class DataManager : MonoBehaviour
 
     public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
-        { FruitType.Strawberry,3},
-        {FruitType.Grape,2},
+        { FruitType.Strawberry,1},
+        {FruitType.Grape,1},
         {FruitType.orange,1},
+        {FruitType.pineapple,1},
+        {FruitType.blueberry,1},
     };
     public FruitType selectedFruit;
 
     public int strawberryTangHuru;
+    public int grapeTangHuru;
+    public int orangeTangHuru;
+    public int pineappleTangHuru;
+    public int blueberryTangHuru;
     [SerializeField] int startingGold = 150;
     [SerializeField] int currentGold;
     [SerializeField] TextMeshProUGUI displayGold;
     [SerializeField] TextMeshProUGUI displayStarwberryTangHuru;
+    [SerializeField] TextMeshProUGUI displayGrapeTanghuru;
+    [SerializeField] TextMeshProUGUI displayOrangeTanghuru;
+    [SerializeField] TextMeshProUGUI displayPineappleTanghuru;
+    [SerializeField] TextMeshProUGUI displayBlueberryTanghuru;
     public int ruby;
     public bool isFruitAvaliable = false;
 
@@ -96,6 +108,10 @@ public class DataManager : MonoBehaviour
     void UpdateStarawberryTangHuru()
     {
         displayStarwberryTangHuru.text = strawberryTangHuru.ToString();
+        displayGrapeTanghuru.text  = grapeTangHuru.ToString();
+        displayOrangeTanghuru.text = orangeTangHuru.ToString();
+        displayPineappleTanghuru.text = pineappleTangHuru.ToString();
+        displayBlueberryTanghuru.text = blueberryTangHuru.ToString();
     }
 
     /// <summary>
@@ -104,7 +120,7 @@ public class DataManager : MonoBehaviour
     void CheckFruitCount()
     {
         if (fruitCounts[FruitType.Strawberry]<=0 && fruitCounts[FruitType.Grape]<=0&&
-            fruitCounts[FruitType.orange] <= 0)
+            fruitCounts[FruitType.orange] <= 0&& fruitCounts[FruitType.pineapple]<=00&& fruitCounts[FruitType.blueberry]<=0)
         {
             isFruitAvaliable = false;
         }
