@@ -120,7 +120,7 @@ public class DataManager : MonoBehaviour
     void CheckFruitCount()
     {
         if (fruitCounts[FruitType.Strawberry]<=0 && fruitCounts[FruitType.Grape]<=0&&
-            fruitCounts[FruitType.orange] <= 0&& fruitCounts[FruitType.pineapple]<=00&& fruitCounts[FruitType.blueberry]<=0)
+            fruitCounts[FruitType.orange] <= 0&& fruitCounts[FruitType.pineapple]<=0&& fruitCounts[FruitType.blueberry]<=0)
         {
             isFruitAvaliable = false;
         }
@@ -145,6 +145,10 @@ public class DataManager : MonoBehaviour
             int randomIndex = Random.Range(0, avaliableFruits.Count);
             selectedFruit = avaliableFruits[randomIndex]; // 과일의 종류 랜덤으로 선택 
             fruitCounts[selectedFruit]--; // 선택된 과일의 수 감소 
+        }
+        foreach(var fruit in fruitCounts.Keys)
+        {
+            Debug.Log(fruit + " :" +fruitCounts[fruit]);
         }
     }
 }

@@ -11,7 +11,7 @@ public class B_ProgressBar : MonoBehaviour
     [SerializeField] TextMeshProUGUI time;
 
     // 손질에 걸리는 시간
-    [SerializeField] float maxTime = 4;
+    [SerializeField] float maxTime;
     // 현재 손질하기 남은 시간
     private float curTime;
     // 손질중인가요
@@ -20,6 +20,14 @@ public class B_ProgressBar : MonoBehaviour
 
     private void OnEnable()
     {
+        if(DataManager.Instance.selectedFruit == FruitType.Strawberry || DataManager.Instance.selectedFruit == FruitType.Grape)
+        {
+            maxTime = 30;
+        }
+        else
+        {
+            maxTime = 36;
+        }
         curTime = maxTime;
         progressBar.value = (float)curTime / (float)maxTime;
     }
@@ -49,6 +57,14 @@ public class B_ProgressBar : MonoBehaviour
     {
         if (curTime <= 0.1)
         {
+            if (DataManager.Instance.selectedFruit == FruitType.Strawberry || DataManager.Instance.selectedFruit == FruitType.Grape)
+            {
+                maxTime = 30;
+            }
+            else
+            {
+                maxTime = 36;
+            }
             curTime = maxTime;
             isPrepping = false;
             progressBar.gameObject.SetActive(false);
