@@ -12,6 +12,14 @@ public enum FruitType
     blueberry
 }
 
+public enum FruitState
+{
+    noneTime,
+    flowerTime,
+    midTime
+    
+}
+
 public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
@@ -25,12 +33,22 @@ public class DataManager : MonoBehaviour
         {FruitType.blueberry,1},
     };
     public FruitType selectedFruit;
+    public FruitType growFruit; // 자라는 중인 열매
+    public FruitState growState;
 
     public int strawberryTangHuru;
     public int grapeTangHuru;
     public int orangeTangHuru;
     public int pineappleTangHuru;
     public int blueberryTangHuru;
+
+    // 컨테이너
+    public int strawberryFruit;
+    public int grapeFruit;
+    public int orangeFruit;
+    public int pineappleFruit;
+    public int blueberryFruit;
+
     [SerializeField] int startingGold = 150;
     [SerializeField] int currentGold;
     [SerializeField] TextMeshProUGUI displayGold;
