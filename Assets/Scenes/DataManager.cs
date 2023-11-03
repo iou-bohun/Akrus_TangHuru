@@ -120,7 +120,7 @@ public class DataManager : MonoBehaviour
     void CheckFruitCount()
     {
         if (fruitCounts[FruitType.Strawberry]<=0 && fruitCounts[FruitType.Grape]<=0&&
-            fruitCounts[FruitType.orange] <= 0)
+            fruitCounts[FruitType.orange] <= 0&& fruitCounts[FruitType.pineapple]<=00&& fruitCounts[FruitType.blueberry]<=0)
         {
             isFruitAvaliable = false;
         }
