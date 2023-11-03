@@ -15615,10 +15615,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedFruit: 0
   strawberryTangHuru: 0
+  grapeTangHuru: 0
+  orangeTangHuru: 0
+  pineappleTangHuru: 0
+  blueberryTangHuru: 0
   startingGold: 9999
   currentGold: 0
   displayGold: {fileID: 524801020}
   displayStarwberryTangHuru: {fileID: 520140387}
+  displayGrapeTanghuru: {fileID: 0}
+  displayOrangeTanghuru: {fileID: 0}
+  displayPineappleTanghuru: {fileID: 0}
+  displayBlueberryTanghuru: {fileID: 0}
   ruby: 0
   isFruitAvaliable: 0
   avaliableFruits: 
@@ -16375,7 +16383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ce68f94f9f549a14860e23a76f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restingContainer: {fileID: 2085942958}
+  strawberryContainer: {fileID: 0}
+  grapeContainer: {fileID: 0}
+  orangeContaner: {fileID: 0}
+  pineappleContainer: {fileID: 0}
+  blueberryContainer: {fileID: 0}
 --- !u!4 &1332889459
 Transform:
   m_ObjectHideFlags: 0
@@ -20206,7 +20218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717416737}
   - component: {fileID: 1717416739}
-  - component: {fileID: 1717416738}
+  - component: {fileID: 1717416740}
   m_Layer: 5
   m_Name: "\uC9C4\uB3D9"
   m_TagString: Untagged
@@ -20235,21 +20247,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000038146973, y: -200}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1717416738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717416736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8c5becc69c3fb43972c317f787dd6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiHandleRectTransform: {fileID: 1919305551}
-  backgroundActiveColor: {r: 0.7019608, g: 1, b: 0.8039216, a: 1}
-  handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!114 &1717416739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20298,6 +20295,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &1717416740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717416736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a3ea5a6334e4044a60b702ae144503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiHandleRectTransform: {fileID: 1919305551}
+  backgroundActiveColor: {r: 0.7019608, g: 1, b: 0.8039216, a: 1}
+  handleActiveColor: {r: 0.78039217, g: 0.8, b: 0.5019608, a: 1}
 --- !u!1 &1730630418
 GameObject:
   m_ObjectHideFlags: 0

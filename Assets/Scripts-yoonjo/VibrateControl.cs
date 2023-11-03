@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToggleUi : MonoBehaviour
+public class VibrateControl : MonoBehaviour
 {
     [SerializeField] RectTransform uiHandleRectTransform;
     [SerializeField] Color backgroundActiveColor;
@@ -31,7 +31,10 @@ public class ToggleUi : MonoBehaviour
         toggle.onValueChanged.AddListener(OnSwitch);
 
         if (toggle.isOn)
+        {
             OnSwitch(true);
+            VibrationSwitch(true);
+        }
     }
 
     public void OnSwitch(bool on)
@@ -39,5 +42,21 @@ public class ToggleUi : MonoBehaviour
         uiHandleRectTransform.anchoredPosition = on ? handlePosition * -1 : handlePosition;
         backgroundImage.color = on ? backgroundActiveColor : backgroundDefaultColor;
         handleImage.color = on ? handleActiveColor : handleDefaultColor;
+
+        if (on)
+            Debug.Log("Vibration On");
+
+        else
+            Debug.Log("Vibration Off");
+    }
+
+    public string VibrationSwitch(bool on)
+    {
+        if (on)
+            return "vibrate_on";
+
+        else
+            return "vibrate_off";
     }
 }
+
