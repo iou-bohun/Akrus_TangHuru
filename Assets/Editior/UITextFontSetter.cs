@@ -13,7 +13,7 @@ namespace Modules.Util
         // 폰트 경로 설정
         public const string PATH_FONT_TEXTMESHPRO_MALGUNBD = "Assets/TextMesh Pro/Fonts/MALGUNBD SDF.asset";
 
-        [MenuItem("CustomMenu/ChangeTextMeshPro(현재 Scene 내 TextMeshProUGUI 폰트를 MALGUNBD 폰트로 교체함)")]
+        [MenuItem("CustomMenu/ChangeTextMeshPro(현재 Scene 내 TextMeshProUGUI 폰트를 MALGUNBD 폰트로 교체+색 변경)")]
         public static void ChangeFontInTexMeshPro()
         {
             GameObject[] rootObj = GetSceneRootObjects();
@@ -25,6 +25,7 @@ namespace Modules.Util
                 foreach (TextMeshProUGUI txt in com)
                 {
                     txt.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(PATH_FONT_TEXTMESHPRO_MALGUNBD);
+                    txt.color = Color.black;
                 }
             }
         }
