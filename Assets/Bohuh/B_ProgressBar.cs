@@ -11,42 +11,39 @@ public class B_ProgressBar : MonoBehaviour
     [SerializeField] TextMeshProUGUI time;
 
     // 손질에 걸리는 시간
-    [SerializeField] float maxTime;
+    float maxTime = 30;
     // 현재 손질하기 남은 시간
     private float curTime;
     // 손질중인가요
     private bool isPrepping = true;
-
+    private bool isSelected = false;
 
     private void OnEnable()
     {
-        if(DataManager.Instance.selectedFruit == FruitType.Strawberry || DataManager.Instance.selectedFruit == FruitType.Grape)
-        {
-            maxTime = 30;
-        }
-        else
-        {
-            maxTime = 36;
-        }
-        curTime = maxTime;
+        curTime =(float) maxTime;
         progressBar.value = (float)curTime / (float)maxTime;
+        Debug.Log("first" + maxTime);
+        Debug.Log("first curTime " + curTime);
     }
 
     private void Update()
     {
-        if(DataManager.Instance.isFruitAvaliable ==true)
+        if (DataManager.Instance.isFruitAvaliable ==true)
         {
+            Debug.Log("second" + maxTime);
+            Debug.Log("second curTime " + curTime);
+            FruitSelect();
             progressBar.gameObject.SetActive(true);
             curTime -= Time.deltaTime;
             time.text = (((int)curTime % 60).ToString() + "s");
-            ProgerssBarZero();
             HandleBar();
             spawnTang();
+            ProgerssBarZero();
         }
         else
         {
             progressBar.gameObject.SetActive (false);
-            curTime = maxTime;
+            curTime = (float)maxTime;
         }
     }
 
@@ -55,17 +52,9 @@ public class B_ProgressBar : MonoBehaviour
     /// </summary>
     private void ProgerssBarZero()
     {
-        if (curTime <= 0.1)
+        if ((float)curTime <=0)
         {
-            if (DataManager.Instance.selectedFruit == FruitType.Strawberry || DataManager.Instance.selectedFruit == FruitType.Grape)
-            {
-                maxTime = 30;
-            }
-            else
-            {
-                maxTime = 36;
-            }
-            curTime = maxTime;
+            curTime = (float)maxTime;
             isPrepping = false;
             progressBar.gameObject.SetActive(false);
         }
@@ -94,6 +83,16 @@ public class B_ProgressBar : MonoBehaviour
         {
             FindAnyObjectByType<B_Spawnner>().Spawn();
             isPrepping = true;
+            isSelected = false;
+        }
+    }
+    void FruitSelect()
+    {
+        if(isSelected == false)
+        {
+            DataManager.Instance.SelectRandomFruit();
+            maxTime = DataManager.Instance.SelectedFruitPrepTime();
+            isSelected = true;
         }
     }
 }

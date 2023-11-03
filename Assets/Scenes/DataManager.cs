@@ -59,8 +59,14 @@ public class DataManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayBlueberryTanghuru;
     public int ruby;
     public bool isFruitAvaliable = false;
-
     public List<FruitType> avaliableFruits = new List<FruitType>();
+
+    float strawberryPrepTime = 30f;
+    float grapePrepTime = 30f;
+    float orangePrepTime = 36f;
+    float pineapplePrepTime = 36f;
+    float blueberryPrepTime = 36f;
+
 
     private void Awake()
     {
@@ -162,11 +168,24 @@ public class DataManager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, avaliableFruits.Count);
             selectedFruit = avaliableFruits[randomIndex]; // 과일의 종류 랜덤으로 선택 
-            fruitCounts[selectedFruit]--; // 선택된 과일의 수 감소 
         }
-        foreach(var fruit in fruitCounts.Keys)
+    }
+    public float SelectedFruitPrepTime()
+    {
+        switch (selectedFruit)
         {
-            Debug.Log(fruit + " :" +fruitCounts[fruit]);
+            case FruitType.Strawberry:
+                return strawberryPrepTime;
+            case FruitType.Grape:
+                return grapePrepTime;
+            case FruitType.orange:
+                return orangePrepTime;
+            case FruitType.pineapple:
+                return pineapplePrepTime;
+            case FruitType.blueberry:
+                return blueberryPrepTime;
+            default:
+                return 0f;
         }
     }
 }

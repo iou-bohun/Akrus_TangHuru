@@ -32,7 +32,6 @@ public class B_Spawnner : MonoBehaviour
 
    public  void Spawn()
     {
-        DataManager.Instance.SelectRandomFruit();
         Transform curSpawnPoint = null;
         while (curSpawnPoint == null)
         {
@@ -41,11 +40,11 @@ public class B_Spawnner : MonoBehaviour
             {
                 curSpawnPoint = randomSpawnPoint;
             }
-           
         }
         if (curSpawnPoint != null)
         {
             GameObject tangHuru = spawnManager.Get(((int)DataManager.Instance.selectedFruit));
+            DataManager.Instance.fruitCounts[DataManager.Instance.selectedFruit]--;
             tangHuru.transform.position = curSpawnPoint.position;
             curSpawnPoint.GetComponent<B_SpawnPoint>().IsPlaceable = false;
         }

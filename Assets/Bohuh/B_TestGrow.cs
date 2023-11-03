@@ -10,5 +10,9 @@ public class B_TestGrow : MonoBehaviour
         {
             DataManager.Instance.fruitCounts[FruitType.orange]++;
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            DataManager.Instance.fruitCounts[FruitType.Strawberry]++;
+        }
     }
 }
