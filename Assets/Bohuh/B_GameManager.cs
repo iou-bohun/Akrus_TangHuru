@@ -5,7 +5,11 @@ using UnityEngine;
 public class B_GameManager : MonoBehaviour
 {
     private static B_GameManager instance;
-    public B_RestingContainer restingContainer;
+    public B_RestingContainer strawberryContainer;
+    public B_RestingContainer grapeContainer;
+    public B_RestingContainer orangeContaner;
+    public B_RestingContainer pineappleContainer;
+    public B_RestingContainer blueberryContainer;
 
     private void Awake()
     {
