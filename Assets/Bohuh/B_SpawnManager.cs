@@ -17,7 +17,7 @@ public class B_SpawnManager : MonoBehaviour
         }
     }
 
-    public GameObject Get(int index)
+    public GameObject Get(int index, Vector3 transform, Quaternion quartanion)
     {
         GameObject select = null;
         foreach (GameObject item in pools[index])
@@ -31,7 +31,7 @@ public class B_SpawnManager : MonoBehaviour
         }
         if (select == null)
         {
-            select = Instantiate(prefabs[index], transform);
+            select = Instantiate(prefabs[index], transform, quartanion);
             pools[index].Add(select);
         }
         return select;

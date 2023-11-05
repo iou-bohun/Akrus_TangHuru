@@ -1,7 +1,10 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class B_TangHuru : MonoBehaviour
 {
@@ -13,13 +16,20 @@ public class B_TangHuru : MonoBehaviour
     Transform blueberryContainer;
     Transform thisPosition;
 
+    SpriteRenderer thisSprite;
+    [SerializeField] Sprite[] CotingTangHuru;
+    [SerializeField] int selectedFruit;
+
     Vector3 mousePositionOffset;
     Collider2D collide;
     float curTime = 0f;
     private void Awake()
     {
         collide = GetComponent<Collider2D>();
+        thisSprite = GetComponent<SpriteRenderer>();
+        selectedFruit = (int)DataManager.Instance.selectedFruit;
     }
+
 
     private void OnEnable()
     {
@@ -38,7 +48,8 @@ public class B_TangHuru : MonoBehaviour
         curTime += Time.deltaTime;
         if(curTime > 3f)
         {
-            collide.enabled = true;   
+            collide.enabled = true;
+            ChangeTangHuru(selectedFruit);
         }
     }
 
@@ -116,5 +127,27 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position = thisPosition.transform.position;
         }
+    }
+    void  ChangeTangHuru(int fruit)
+    {
+        switch (fruit)
+        {
+            case 0:
+                thisSprite.sprite = CotingTangHuru[0];
+                break;
+            case 1:
+                thisSprite.sprite = CotingTangHuru[1];
+                break;
+           case 2:
+                thisSprite.sprite = CotingTangHuru[2];
+                break;
+            case 3:
+                thisSprite.sprite = CotingTangHuru[3];
+                break;
+            case 4:
+                thisSprite.sprite = CotingTangHuru[4];
+                break; ;
+        }
+        
     }
 }

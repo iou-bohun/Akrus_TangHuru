@@ -4839,7 +4839,7 @@ GameObject:
   - component: {fileID: 6447023492830678395}
   - component: {fileID: 3936207920874529221}
   - component: {fileID: 6864023545001400586}
-  - component: {fileID: 4753399901840853853}
+  - component: {fileID: 1015771642699557524}
   m_Layer: 0
   m_Name: B_TangHuru
   m_TagString: Untagged
@@ -4857,7 +4857,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3797798568516350515}
@@ -4904,8 +4904,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e3081bf2aa13ef2469efe6edfd72d94d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4927,9 +4927,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b12f7d1304970a4688e0c765b5ecf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 0}
---- !u!58 &4753399901840853853
-CircleCollider2D:
+  thisTangHuru: 0
+  img: {fileID: 0}
+  CotingTangHuru:
+  - {fileID: 21300000, guid: 09b89c2f71ec16f4b83e1e97c0090b4f, type: 3}
+  - {fileID: 21300000, guid: 9e11deb2e79319d4dbabece84d438855, type: 3}
+  - {fileID: 21300000, guid: 8e7fefe5cdaf12b41bc28ae02d178767, type: 3}
+  - {fileID: 21300000, guid: 2d3db47098fbc304f8df067e00577ca1, type: 3}
+  - {fileID: 21300000, guid: e345bca2241ad80428759386422b8227, type: 3}
+  selectedFruit: 0
+--- !u!70 &1015771642699557524
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4961,5 +4969,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 3.0799997, y: 7.0299997}
+  m_Direction: 0
