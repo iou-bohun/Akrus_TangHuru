@@ -7,6 +7,7 @@ using System;
 
 public class ExpControl : MonoBehaviour
 {
+    public TMP_Text levelUIText;
     public TMP_Text levelText;
     public TMP_Text expText;
 
@@ -44,6 +45,7 @@ public class ExpControl : MonoBehaviour
             expbar.value = expbar.value - 1;
             level++;
             levelText.text = level.ToString();
+            levelUIText.text = "Lv." + level.ToString();
 
             if (level <= 6)
             {
