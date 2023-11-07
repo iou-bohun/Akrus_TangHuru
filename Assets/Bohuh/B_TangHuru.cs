@@ -77,9 +77,11 @@ public class B_TangHuru : MonoBehaviour
     /// </summary>
     private void OnMouseUp()
     {
+
+        Debug.Log(this.transform.position);
         ///탕후루와 구치소가 충돌한 경우 
-        if (Mathf.Abs(this.transform.position.x - strawberryContainer.transform.position.x) <= 0.5f &&
-            Mathf.Abs(this.transform.position.y - strawberryContainer.transform.position.y) <= 0.5f && thisTangHuru == 0)
+        if (Mathf.Abs(this.transform.position.x - strawberryContainer.transform.position.x) <= 40f &&
+            Mathf.Abs(this.transform.position.y - strawberryContainer.transform.position.y) <= 40f && thisTangHuru == 0)
         {
             this.transform.position = 
                 new Vector3(strawberryContainer.transform.position.x, strawberryContainer.transform.position.y, strawberryContainer.transform.position.z);
@@ -87,8 +89,8 @@ public class B_TangHuru : MonoBehaviour
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
-        else if(Mathf.Abs(this.transform.position.x - grapeContainer.transform.position.x) <= 0.5f &&
-            Mathf.Abs(this.transform.position.y - grapeContainer.transform.position.y) <= 0.5f && thisTangHuru == 1)
+        else if(Mathf.Abs(this.transform.position.x - grapeContainer.transform.position.x) <= 40f &&
+            Mathf.Abs(this.transform.position.y - grapeContainer.transform.position.y) <= 40f && thisTangHuru == 1)
         {
             this.transform.position =
                 new Vector3(grapeContainer.transform.position.x, grapeContainer.transform.position.y, grapeContainer.transform.position.z);
@@ -96,8 +98,8 @@ public class B_TangHuru : MonoBehaviour
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
-        else if(Mathf.Abs(this.transform.position.x - orangeContainer.transform.position.x) <= 0.5f &&
-            Mathf.Abs(this.transform.position.y - orangeContainer.transform.position.y) <= 0.5f && thisTangHuru == 2)
+        else if(Mathf.Abs(this.transform.position.x - orangeContainer.transform.position.x) <= 40f &&
+            Mathf.Abs(this.transform.position.y - orangeContainer.transform.position.y) <= 40f && thisTangHuru == 2)
         {
             this.transform.position =
                 new Vector3(orangeContainer.transform.position.x, orangeContainer.transform.position.y, orangeContainer.transform.position.z);
@@ -105,8 +107,8 @@ public class B_TangHuru : MonoBehaviour
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
-        else if(Mathf.Abs(this.transform.position.x - pineappleContainer.transform.position.x) <= 0.5f &&
-            Mathf.Abs(this.transform.position.y - pineappleContainer.transform.position.y) <= 0.5f && thisTangHuru == 3)
+        else if(Mathf.Abs(this.transform.position.x - pineappleContainer.transform.position.x) <= 40f &&
+            Mathf.Abs(this.transform.position.y - pineappleContainer.transform.position.y) <= 40f && thisTangHuru == 3)
         {
             this.transform.position =
                 new Vector3(pineappleContainer.transform.position.x, pineappleContainer.transform.position.y, pineappleContainer.transform.position.z);
@@ -114,8 +116,8 @@ public class B_TangHuru : MonoBehaviour
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
-        else if(Mathf.Abs(this.transform.position.x - blueberryContainer.transform.position.x) <= 0.5f &&
-            Mathf.Abs(this.transform.position.y - blueberryContainer.transform.position.y) <= 0.5f && thisTangHuru == 4)
+        else if(Mathf.Abs(this.transform.position.x - blueberryContainer.transform.position.x) <= 40f &&
+            Mathf.Abs(this.transform.position.y - blueberryContainer.transform.position.y) <= 40f && thisTangHuru == 4)
         {
             this.transform.position =
                 new Vector3(blueberryContainer.transform.position.x, blueberryContainer.transform.position.y, blueberryContainer.transform.position.z);

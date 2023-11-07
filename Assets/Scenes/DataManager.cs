@@ -149,6 +149,7 @@ public class DataManager : MonoBehaviour
             isFruitAvaliable = false;
         }
         else { isFruitAvaliable = true; }
+        Debug.Log("Count");
     }
 
     /// <summary>

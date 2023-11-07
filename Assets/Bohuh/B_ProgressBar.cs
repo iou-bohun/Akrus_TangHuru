@@ -22,16 +22,12 @@ public class B_ProgressBar : MonoBehaviour
     {
         curTime =(float) maxTime;
         progressBar.value = (float)curTime / (float)maxTime;
-        Debug.Log("first" + maxTime);
-        Debug.Log("first curTime " + curTime);
     }
 
     private void Update()
     {
         if (DataManager.Instance.isFruitAvaliable ==true)
         {
-            Debug.Log("second" + maxTime);
-            Debug.Log("second curTime " + curTime);
             FruitSelect();
             progressBar.gameObject.SetActive(true);
             curTime -= Time.deltaTime;

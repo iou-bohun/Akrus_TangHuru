@@ -22,6 +22,7 @@ public class B_GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Debug.Log(strawberryContainer.GetComponent<Transform>().position);
     }
 
     public static B_GameManager Instance
