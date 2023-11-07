@@ -813,7 +813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1041582727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -877,8 +877,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 24.400002, y: 24.400002, z: 24.400002}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1327164995}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1088,11 +1087,11 @@ Transform:
   m_GameObject: {fileID: 1327164994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.295082, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1041582728}
+  m_Father: {fileID: 1409862748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1327164996
 SpriteRenderer:
@@ -1241,7 +1240,7 @@ GameObject:
   - component: {fileID: 1409862748}
   - component: {fileID: 1409862747}
   m_Layer: 0
-  m_Name: "\uD310\uB9E4\uC18C \uBC30\uACBD"
+  m_Name: "\uC81C\uC791\uC18C \uBC30\uACBD"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1310,7 +1309,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 24.400002, y: 24.400002, z: 24.400002}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1327164995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1724,8 +1724,8 @@ SceneRoots:
   - {fileID: 295477181}
   - {fileID: 254366301}
   - {fileID: 1791572218}
-  - {fileID: 1409862748}
   - {fileID: 1041582728}
+  - {fileID: 1409862748}
   - {fileID: 1976604109}
   - {fileID: 726590012}
   - {fileID: 1290275834}
