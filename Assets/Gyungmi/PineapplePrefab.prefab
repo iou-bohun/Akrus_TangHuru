@@ -99,10 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHarvestingReady: 0
-  maxTime: 0
+  maxTime: 33
   curruntTime: 0
-  fruitStep: []
-  changeTimer: 0
+  fruitStep:
+  - {fileID: 21300000, guid: 4a2bdae0ef383ed4ab12b5a7ecc30761, type: 3}
+  - {fileID: 21300000, guid: c889c7ca8af8d9c4b927b114dde03bc6, type: 3}
+  - {fileID: 21300000, guid: 07d410615e1bc78458a1c33715a589e5, type: 3}
+  changeTimer: 11
 --- !u!61 &3915134496852262401
 BoxCollider2D:
   m_ObjectHideFlags: 0

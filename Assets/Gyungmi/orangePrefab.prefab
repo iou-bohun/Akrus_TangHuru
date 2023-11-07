@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8522284109098452982}
   - component: {fileID: 5973280773826378997}
   - component: {fileID: -2950628802611720615}
+  - component: {fileID: 2537333296549299822}
   m_Layer: 6
   m_Name: orangePrefab
   m_TagString: Fruit
@@ -60,10 +61,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHarvestingReady: 0
-  maxTime: 0
+  maxTime: 27
   curruntTime: 0
-  fruitStep: []
-  changeTimer: 0
+  fruitStep:
+  - {fileID: 21300000, guid: 64109382d78bf7d42bdb2e7662f7ad51, type: 3}
+  - {fileID: 21300000, guid: f9a613ed47a0ba4478de8365e7ce68ab, type: 3}
+  - {fileID: 21300000, guid: eaa250024ffca1343b81315037157b43, type: 3}
+  changeTimer: 9
 --- !u!212 &5973280773826378997
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -161,3 +165,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.44, y: 7.44}
   m_EdgeRadius: 0
+--- !u!114 &2537333296549299822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398281514920244714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a07b9b37596104e900e4262ccb4e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHarvestingReady: 0
+  maxTime: 0
+  curruntTime: 0
+  fruitStep: []
+  changeTimer: 0

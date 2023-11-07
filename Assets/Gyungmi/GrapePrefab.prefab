@@ -47,10 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHarvestingReady: 0
-  maxTime: 0
+  maxTime: 21
   curruntTime: 0
-  fruitStep: []
-  changeTimer: 0
+  fruitStep:
+  - {fileID: 21300000, guid: 0138a841a412d51469496cb4c740b680, type: 3}
+  - {fileID: 21300000, guid: 58bafdd1c262c654886fa44f66a5245d, type: 3}
+  - {fileID: 21300000, guid: 7625f1a70f7440743a98d8a42fd0ba25, type: 3}
+  changeTimer: 7
 --- !u!212 &267259691817653122
 SpriteRenderer:
   m_ObjectHideFlags: 0

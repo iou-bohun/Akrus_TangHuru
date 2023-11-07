@@ -3741,6 +3741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733104411}
   - component: {fileID: 733104410}
+  - component: {fileID: 733104412}
   m_Layer: 0
   m_Name: FruitSpawner
   m_TagString: Untagged
@@ -3762,10 +3763,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: []
   fruits:
-  - {fileID: 3621998600057050079, guid: 40f6356f587509140a0b7f03f7740e23, type: 3}
+  - {fileID: 1148289476512959384, guid: dc4ca4a47c94f364fa8199fec790bdf3, type: 3}
   - {fileID: 2398281514920244714, guid: fb34dfee44d694f4b9a4b5f8f42de76a, type: 3}
   - {fileID: 4719660577964631620, guid: 0250f518aa6064741ac81e0fae4602fd, type: 3}
-  - {fileID: 1148289476512959384, guid: dc4ca4a47c94f364fa8199fec790bdf3, type: 3}
+  - {fileID: 8606147879232210671, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+  - {fileID: 3621998600057050079, guid: 40f6356f587509140a0b7f03f7740e23, type: 3}
   fruitsList: []
 --- !u!4 &733104411
 Transform:
@@ -3782,6 +3784,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733104412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733104409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a07b9b37596104e900e4262ccb4e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHarvestingReady: 0
+  maxTime: 15
+  curruntTime: 0
+  fruitStep:
+  - {fileID: 21300000, guid: 6ba65d1632aa8174b925ef012d2aa96c, type: 3}
+  - {fileID: 21300000, guid: bd5819e3c203e304fa07e4e3e2d99278, type: 3}
+  - {fileID: 21300000, guid: 797ffca9ef8b4fc4bbff93959f02b797, type: 3}
+  changeTimer: 5
 --- !u!1 &769408655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5655,7 +5677,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 2048056876}
   time: {fileID: 726101244}
-  maxTime: 4
 --- !u!224 &966883823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12447,6 +12468,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135139237}
   m_CullTransparentMesh: 1
+--- !u!1001 &3681786981382571534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735466971676740202, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606147879232210671, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
+      propertyPath: m_Name
+      value: BlueberryPrefeb
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80f7ed4ab55e8cd4ca82279ecea925f1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12457,3 +12535,4 @@ SceneRoots:
   - {fileID: 2002814034}
   - {fileID: 788151941}
   - {fileID: 1021845428}
+  - {fileID: 3681786981382571534}
