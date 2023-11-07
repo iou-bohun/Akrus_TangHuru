@@ -11,8 +11,8 @@ public class FruitSpawner : MonoBehaviour
     public GameObject[] fruits;
     public List<GameObject> fruitsList = new List<GameObject>();
 
-    // 딸기 생성 주기
-    float createTime = 5f;
+    // 과일 생성 주기
+    float createTime;
     // 최대 갯수
     int maxNum = 8;
 
@@ -29,6 +29,7 @@ public class FruitSpawner : MonoBehaviour
         }
 
         points = GameObject.Find("FruitSpawnPoint").GetComponentsInChildren<Transform>();
+        
     }
 
     public static FruitSpawner Instance
@@ -51,22 +52,32 @@ public class FruitSpawner : MonoBehaviour
         
         if (points.Length > 0)
         {
-            StartCoroutine(this.SpawnFruit());
+            StartCoroutine(SpawnFruit());
         }
         
+    }
+
+    public void randomFruit()
+    {
+        //int randomSelect = Rnadom.Range
+
     }
 
     
     public IEnumerator SpawnFruit()
     {
-        while (true)
+        int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
+        while (fruitsList.Count <= maxNum)
         {
+            fruitsList.Clear();
             int selection = Random.Range(0, fruits.Length); // 과일 프리팹 랜덤 선택
             GameObject selectedFruit = fruits[selection];
-            int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
+            //int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
+            createTime = 3f;
 
             if (fruitCount < maxNum)
             {
+                
                 yield return new WaitForSeconds(createTime);
 
                 int idx = Random.Range(1, points.Length);
@@ -83,9 +94,11 @@ public class FruitSpawner : MonoBehaviour
     
     void Update()
     {
+        /*
         if (points.Length > 0)
         {
             SpawnFruit();
         }
+        */
     }
 }

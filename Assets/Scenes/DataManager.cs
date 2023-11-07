@@ -17,7 +17,6 @@ public enum FruitState
     noneTime,
     flowerTime,
     midTime
-    
 }
 
 public class DataManager : MonoBehaviour
@@ -26,7 +25,7 @@ public class DataManager : MonoBehaviour
 
     public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
-        { FruitType.Strawberry,1},
+        {FruitType.Strawberry,1},
         {FruitType.Grape,1},
         {FruitType.orange,1},
         {FruitType.pineapple,1},
@@ -66,6 +65,12 @@ public class DataManager : MonoBehaviour
     float orangePrepTime = 36f;
     float pineapplePrepTime = 36f;
     float blueberryPrepTime = 36f;
+
+    float strawberryGrowTime = 5f;
+    float grapeGrowTime = 7f;
+    float orangeGrowTime = 9f;
+    float pineappleGrowTime = 11f;
+    float blueberryGrowTime = 13f;
 
 
     private void Awake()

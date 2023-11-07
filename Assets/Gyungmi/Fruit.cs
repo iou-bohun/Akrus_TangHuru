@@ -49,8 +49,8 @@ public class Fruit : MonoBehaviour
 
     }
 
-    private void OnEnable()
-    {
+    //private void OnEnable()
+    //{
         /*
         if (DataManager.Instance.growFruit == FruitType.Strawberry)
         {
@@ -76,7 +76,7 @@ public class Fruit : MonoBehaviour
         changeTimer = maxTime/3;
         //growBar.value = ((float)curruntTime/3) / ((float)maxTime/3f);
         */
-    }
+    //}
 
     public void FruitStateChange()
     {
