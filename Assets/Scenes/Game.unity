@@ -22279,6 +22279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e2bc62ad25b254590e51bc89e59b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelUIText: {fileID: 1648045845}
   levelText: {fileID: 126201814}
   expText: {fileID: 807968561}
   expbar: {fileID: 431290865}
@@ -23812,7 +23813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB808\uBCA8"
+  m_text: Lv.1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23b1a16cfbe57e84795cbda071321bdb, type: 2}
   m_sharedMaterial: {fileID: 6642472890545576848, guid: 23b1a16cfbe57e84795cbda071321bdb, type: 2}
