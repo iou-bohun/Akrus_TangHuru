@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Pineapple
   m_EditorClassIdentifier: 
   fruitName: pineapple
-  none_time: 5
-  flower_Time: 5
-  mid_Time: 5
+  none_time: 11
+  flower_Time: 11
+  mid_Time: 11
   flowerSprite: {fileID: 0}
   middleFruitSprite: {fileID: 0}
   fruitSprite: {fileID: 0}

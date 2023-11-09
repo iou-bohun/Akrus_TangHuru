@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Blueberry
   m_EditorClassIdentifier: 
   fruitName: blueberry
-  none_time: 5
-  flower_Time: 5
-  mid_Time: 5
-  flowerSprite: {fileID: 0}
-  middleFruitSprite: {fileID: 0}
-  fruitSprite: {fileID: 0}
+  none_time: 13
+  flower_Time: 13
+  mid_Time: 13
+  flowerSprite: {fileID: 21300000, guid: 2a401f8adf3dfe442a4ebb6452df55ad, type: 3}
+  middleFruitSprite: {fileID: 21300000, guid: 0942dfa7a74e851459039fd30c452af9, type: 3}
+  fruitSprite: {fileID: 21300000, guid: 4a95dcc9565634a42ad1784bab312801, type: 3}

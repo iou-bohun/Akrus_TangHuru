@@ -103,7 +103,7 @@ public class DataManager : MonoBehaviour
         UpdateDisplay();
         UpdateStarawberryTangHuru();
         CheckFruitCount();
-        Debug.Log(isFruitAvaliable);
+        //Debug.Log(isFruitAvaliable);
     }
 
     /// <summary>
@@ -154,7 +154,7 @@ public class DataManager : MonoBehaviour
             isFruitAvaliable = false;
         }
         else { isFruitAvaliable = true; }
-        Debug.Log("Count");
+        //Debug.Log("Count");
     }
 
     /// <summary>

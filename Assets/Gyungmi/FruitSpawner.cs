@@ -57,17 +57,11 @@ public class FruitSpawner : MonoBehaviour
         
     }
 
-    public void randomFruit()
-    {
-        int randomSelect = Random.Range(0, fruits.Length);
-        GameObject selectedFruit = fruits[randomSelect];
-        //createTime = 
-    }
-
     
     public IEnumerator SpawnFruit()
     {
-        int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
+        //int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
+        int fruitCount = fruitsList.Count;
         while (fruitsList.Count <= maxNum)
         {
             fruitsList.Clear();
