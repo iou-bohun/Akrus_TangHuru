@@ -103,6 +103,7 @@ public class Fruit : MonoBehaviour
         curTimer = 0f;
         if(sp.sprite.name != fruitStep[fruitStep.Length - 1].name)
         {
+            //if(curTimer > flowerTime)
             changeAt = true;
             spriteIndex++;
         }
@@ -114,11 +115,18 @@ public class Fruit : MonoBehaviour
 
     void Update()
     {
+        curTimer += Time.deltaTime;
+        //if (curTimer > DataManager.Instance.strawberryGrowTime)
         if(Input.GetKeyDown(KeyCode.Space))
         {
             spriteIndex = 0;
             sp.sprite = fruitStep[0];
             curTimer = 0f;
+        }
+        if (curTimer > maxTime)
+        {
+            isHarvestingReady = true;
+
         }
         if(changeAt)
         {

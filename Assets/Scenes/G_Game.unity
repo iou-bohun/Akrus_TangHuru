@@ -1480,6 +1480,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278481405}
   m_CullTransparentMesh: 1
+--- !u!1 &284719433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284719435}
+  - component: {fileID: 284719434}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &284719434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284719433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a07b9b37596104e900e4262ccb4e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHarvestingReady: 0
+  maxTime: 9
+  curruntTime: 0
+  fruitStep:
+  - {fileID: 21300000, guid: 6ba65d1632aa8174b925ef012d2aa96c, type: 3}
+  - {fileID: 21300000, guid: bd5819e3c203e304fa07e4e3e2d99278, type: 3}
+  - {fileID: 21300000, guid: 797ffca9ef8b4fc4bbff93959f02b797, type: 3}
+  changeTimer: 3
+--- !u!4 &284719435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284719433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9150052, y: 6.6959124, z: 0.2824982}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &295151361
 GameObject:
   m_ObjectHideFlags: 0
@@ -16454,3 +16506,4 @@ SceneRoots:
   - {fileID: 341885889}
   - {fileID: 1106825998}
   - {fileID: 1009681772}
+  - {fileID: 284719435}

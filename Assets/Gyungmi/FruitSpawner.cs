@@ -59,8 +59,9 @@ public class FruitSpawner : MonoBehaviour
 
     public void randomFruit()
     {
-        //int randomSelect = Rnadom.Range
-
+        int randomSelect = Random.Range(0, fruits.Length);
+        GameObject selectedFruit = fruits[randomSelect];
+        //createTime = 
     }
 
     
