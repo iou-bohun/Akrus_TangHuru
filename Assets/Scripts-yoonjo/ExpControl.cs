@@ -31,7 +31,7 @@ public class ExpControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log($"GetKeyDown:{KeyCode.E}");
-            curExp += 1;  //E를 누를때마다 Exp가 10씩 증가
+            curExp += 1;  
         }
 
         Handle();
@@ -45,7 +45,7 @@ public class ExpControl : MonoBehaviour
             expbar.value = expbar.value - 1;
             level++;
             levelText.text = level.ToString();
-            levelUIText.text = "Lv." + level.ToString();
+            levelUIText.text = level.ToString();
 
             if (level <= 6)
             {
