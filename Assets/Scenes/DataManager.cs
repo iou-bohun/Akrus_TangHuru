@@ -26,10 +26,10 @@ public class DataManager : MonoBehaviour
     public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
         {FruitType.Strawberry,1},
-        {FruitType.Grape,1},
-        {FruitType.orange,1},
-        {FruitType.pineapple,1},
-        {FruitType.blueberry,1},
+        {FruitType.Grape,0},
+        {FruitType.orange,0},
+        {FruitType.pineapple,0},
+        {FruitType.blueberry,0},
     };
     public FruitType selectedFruit;
     public FruitType growFruit; // 자라는 중인 열매
@@ -103,7 +103,6 @@ public class DataManager : MonoBehaviour
         UpdateDisplay();
         UpdateStarawberryTangHuru();
         CheckFruitCount();
-        Debug.Log(isFruitAvaliable);
     }
 
     /// <summary>
@@ -154,7 +153,6 @@ public class DataManager : MonoBehaviour
             isFruitAvaliable = false;
         }
         else { isFruitAvaliable = true; }
-        Debug.Log("Count");
     }
 
     /// <summary>
