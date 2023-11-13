@@ -26,13 +26,13 @@ public class DataManager : MonoBehaviour
     public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
         {FruitType.Strawberry,1},
-        {FruitType.Grape,1},
-        {FruitType.orange,1},
-        {FruitType.pineapple,1},
-        {FruitType.blueberry,1},
+        {FruitType.Grape,0},
+        {FruitType.orange,0},
+        {FruitType.pineapple,0},
+        {FruitType.blueberry,0},
     };
     public FruitType selectedFruit;
-    public FruitType growFruit; // ÀÚ¶ó´Â ÁßÀÎ ¿­¸Å
+    public FruitType growFruit; // ï¿½Ú¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public FruitState growState;
 
     public int strawberryTangHuru;
@@ -41,7 +41,7 @@ public class DataManager : MonoBehaviour
     public int pineappleTangHuru;
     public int blueberryTangHuru;
 
-    // ÄÁÅ×ÀÌ³Ê
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½
     public int strawberryFruit;
     public int grapeFruit;
     public int orangeFruit;
@@ -103,28 +103,27 @@ public class DataManager : MonoBehaviour
         UpdateDisplay();
         UpdateStarawberryTangHuru();
         CheckFruitCount();
-        //Debug.Log(isFruitAvaliable);
     }
 
     /// <summary>
-    /// °ñµå Áõ°¡
+    /// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="mount">  mount¸¸Å­ °ñµå Áõ°¡</param>
+    /// <param name="mount">  mountï¿½ï¿½Å­ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</param>
     public void Deposit(int mount)
     {
         currentGold += Mathf.Abs(mount);
     }
     /// <summary>
-    ///  °ñµå °¨¼Ò
+    ///  ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="mount">mount¸¸Å­ °ñµå °¨¼Ò</param>
+    /// <param name="mount">mountï¿½ï¿½Å­ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</param>
     public void Withdraw(int mount)
     {
         currentGold -= Mathf.Abs(mount);
     }
 
     /// <summary>
-    /// °ñµå µð½ºÇÃ·¹ÀÌ 
+    /// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 
     /// </summary>
     void UpdateDisplay()
     {
@@ -132,7 +131,7 @@ public class DataManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ±¸Ä¡¼Ò¿¡ ÅÁÈÄ·ç ¼ö µð½ºÇÃ·¹ÀÌ 
+    /// ï¿½ï¿½Ä¡ï¿½Ò¿ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 
     /// </summary>
     void UpdateStarawberryTangHuru()
     {
@@ -144,7 +143,7 @@ public class DataManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇöÁ¦ º¸°ü¼Ò¿¡ »ç¿ë °¡´ÉÇÑ °úÀÏÀÌ ÀÖ´ÂÁö È®ÀÎ 
+    /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ 
     /// </summary>
     void CheckFruitCount()
     {
@@ -154,26 +153,25 @@ public class DataManager : MonoBehaviour
             isFruitAvaliable = false;
         }
         else { isFruitAvaliable = true; }
-        //Debug.Log("Count");
     }
 
     /// <summary>
-    /// »ç¿ë°¡´ÉÇÑ °úÀÏÀ» ·£´ýÀ¸·Î ¼±ÅÃ
+    /// ï¿½ï¿½ë°¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void SelectRandomFruit()
     {
         avaliableFruits.Clear();
-        foreach(var fruit in fruitCounts.Keys ) //¾î¶°ÇÑ °úÀÏÀÌ º¸°üµÇ¾îÀÖ³ª 
+        foreach(var fruit in fruitCounts.Keys ) //ï¿½î¶°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½Ö³ï¿½ 
         {
-            if (fruitCounts[fruit] > 0)  //°úÀÏÀÌ 1°³ ÀÌ»ó º¸°üµÇ¾îÀÖ´Ù¸é 
+            if (fruitCounts[fruit] > 0)  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½Ö´Ù¸ï¿½ 
             {
-                avaliableFruits.Add(fruit); // »ç¿ë°¡´ÉÇÑ °úÀÏ¿¡ ±× °úÀÏÀÇ Á¾·ù¸¦ Ãß°¡ 
+                avaliableFruits.Add(fruit); // ï¿½ï¿½ë°¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ 
             }
         }
-        if(avaliableFruits.Count > 0) // »ç¿ë °¡´ÉÇÑ  °úÀÏÀÇ Á¾·ù°¡ ÀÖ´Ù¸é 
+        if(avaliableFruits.Count > 0) // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½ 
         {
             int randomIndex = Random.Range(0, avaliableFruits.Count);
-            selectedFruit = avaliableFruits[randomIndex]; // °úÀÏÀÇ Á¾·ù ·£´ýÀ¸·Î ¼±ÅÃ 
+            selectedFruit = avaliableFruits[randomIndex]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
         }
     }
     public float SelectedFruitPrepTime()
