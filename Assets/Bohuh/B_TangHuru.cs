@@ -77,8 +77,6 @@ public class B_TangHuru : MonoBehaviour
     /// </summary>
     private void OnMouseUp()
     {
-
-        Debug.Log(this.transform.position);
         ///탕후루와 구치소가 충돌한 경우 
         if (Mathf.Abs(this.transform.position.x - strawberryContainer.transform.position.x) <= 40f &&
             Mathf.Abs(this.transform.position.y - strawberryContainer.transform.position.y) <= 40f && thisTangHuru == 0)

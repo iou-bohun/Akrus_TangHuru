@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Gyungmi/FruitGrow.cs.meta
-guid: 06281f6451a104445b440bb3a5c7cb5a
-========
-guid: 014e6c30ce2329f419c821debc917730
->>>>>>>> Bohun:Assets/Bohuh/ProcessingFruit.cs.meta
+guid: d0f835b64440c3d4bb60d1936483adbd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

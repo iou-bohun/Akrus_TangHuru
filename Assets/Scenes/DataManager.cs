@@ -100,9 +100,9 @@ public class DataManager : MonoBehaviour
     }
     private void Update()
     {
+        CheckFruitCount();
         UpdateDisplay();
         UpdateStarawberryTangHuru();
-        CheckFruitCount();
     }
 
     /// <summary>
