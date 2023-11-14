@@ -16,6 +16,6 @@ MonoBehaviour:
   none_time: 9
   flower_Time: 9
   mid_Time: 9
-  flowerSprite: {fileID: 0}
-  middleFruitSprite: {fileID: 0}
-  fruitSprite: {fileID: 0}
+  flowerSprite: {fileID: 21300000, guid: 64109382d78bf7d42bdb2e7662f7ad51, type: 3}
+  middleFruitSprite: {fileID: 21300000, guid: f9a613ed47a0ba4478de8365e7ce68ab, type: 3}
+  fruitSprite: {fileID: 21300000, guid: eaa250024ffca1343b81315037157b43, type: 3}
