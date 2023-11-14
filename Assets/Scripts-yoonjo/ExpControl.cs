@@ -28,9 +28,9 @@ public class ExpControl : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            Debug.Log($"GetKeyDown:{KeyCode.E}");
+            Debug.Log($"GetKeyDown:{KeyCode.G}");
             curExp += 1;  
         }
 
@@ -44,8 +44,8 @@ public class ExpControl : MonoBehaviour
         {
             expbar.value = expbar.value - 1;
             level++;
-            levelText.text = level.ToString();
             levelUIText.text = level.ToString();
+            levelText.text = level.ToString();
 
             if (level <= 6)
             {
