@@ -11,9 +11,9 @@ namespace Modules.Util
     public class UITextFontSetter
     {
         // 폰트 경로 설정
-        public const string PATH_FONT_TEXTMESHPRO_MALGUNBD = "Assets/TextMesh Pro/Fonts/MALGUNBD SDF.asset";
+        public const string PATH_FONT_TEXTMESHPRO_MALGUNBD = "Assets/TextMesh Pro/Fonts/TMoneyRoundWindExtraBold SDF.asset";
 
-        [MenuItem("CustomMenu/ChangeTextMeshPro(현재 Scene 내 TextMeshProUGUI 폰트를 MALGUNBD 폰트로 교체+색 변경)")]
+        [MenuItem("CustomMenu/ChangeTextMeshPro(현재 Scene 내 TextMeshProUGUI 폰트를 TMoneyRoundWInd 폰트로 교체+색 변경)")]
         public static void ChangeFontInTexMeshPro()
         {
             GameObject[] rootObj = GetSceneRootObjects();
