@@ -41,6 +41,8 @@ public class DataManager : MonoBehaviour
     public int pineappleTangHuru;
     public int blueberryTangHuru;
 
+    public int sellingStarwberryTangHuru;
+
     // �����̳�
     public int strawberryFruit;
     public int grapeFruit;
@@ -72,6 +74,7 @@ public class DataManager : MonoBehaviour
     float pineappleGrowTime = 11f;
     float blueberryGrowTime = 13f;
 
+    public int level = 1;
 
     private void Awake()
     {
