@@ -5,29 +5,15 @@ using UnityEngine.UI;
 
 public class VibrateControl : MonoBehaviour
 {
-    [SerializeField] RectTransform uiHandleRectTransform;
-    [SerializeField] Color backgroundActiveColor;
-    [SerializeField] Color handleActiveColor;
+    [SerializeField] Image toggleImage; // Image 컴포넌트가 있는 UI 요소를 여기에 할당해야 합니다.
+    public Sprite imageWhenOn; // 토글이 켜진 상태에서 보여질 이미지
+    public Sprite imageWhenOff; // 토글이 꺼진 상태에서 보여질 이미지
 
-    Image backgroundImage, handleImage;
-
-    Color backgroundDefaultColor, handleDefaultColor;
     Toggle toggle;
 
-    Vector2 handlePosition;
-
-    private void Awake()
+    void Awake()
     {
         toggle = GetComponent<Toggle>();
-
-        handlePosition = uiHandleRectTransform.anchoredPosition;
-
-        backgroundImage = uiHandleRectTransform.parent.GetComponent<Image>();
-        handleImage = uiHandleRectTransform.GetComponent<Image>();
-
-        backgroundDefaultColor = backgroundImage.color;
-        handleDefaultColor = handleImage.color;
-
         toggle.onValueChanged.AddListener(OnSwitch);
 
         if (toggle.isOn)
@@ -35,19 +21,25 @@ public class VibrateControl : MonoBehaviour
             OnSwitch(true);
             VibrationSwitch(true);
         }
+        else
+        {
+            OnSwitch(false);
+            VibrationSwitch(false);
+        }
     }
 
     public void OnSwitch(bool on)
     {
-        uiHandleRectTransform.anchoredPosition = on ? handlePosition * -1 : handlePosition;
-        backgroundImage.color = on ? backgroundActiveColor : backgroundDefaultColor;
-        handleImage.color = on ? handleActiveColor : handleDefaultColor;
-
         if (on)
+        {
+            toggleImage.sprite = imageWhenOn;
             Debug.Log("Vibration On");
-
+        }   
         else
+        {
+            toggleImage.sprite = imageWhenOff;
             Debug.Log("Vibration Off");
+        } 
     }
 
     public string VibrationSwitch(bool on)
