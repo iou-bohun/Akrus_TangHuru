@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3936207920874529221, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5963642808845263532, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
       propertyPath: m_Name
       value: B_blueberryTanghuru

@@ -25,7 +25,7 @@ public class DataManager : MonoBehaviour
 
     public Dictionary<FruitType, int> fruitCounts = new Dictionary<FruitType, int>
     {
-        {FruitType.Strawberry,1},
+        {FruitType.Strawberry,10},
         {FruitType.Grape,0},
         {FruitType.orange,0},
         {FruitType.pineapple,0},
