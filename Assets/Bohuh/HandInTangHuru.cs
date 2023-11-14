@@ -6,11 +6,12 @@ public class HandInTangHuru : MonoBehaviour
 {
    public void HandStrawberryTang()
     {
-        Debug.Log("ButtonClick");
         if(DataManager.Instance.strawberryTangHuru >= 1)
         {
+            SoundManager.Instance.PlayTapSound();
             DataManager.Instance.strawberryTangHuru--;
             DataManager.Instance.sellingStarwberryTangHuru++;
+
         }
     }
 }

@@ -11,6 +11,7 @@ public class CloseButtonHandler : MonoBehaviour
 
     public void OnButtonClick()
     {
+        SoundManager.Instance.PlayTapSound();
         var seq = DOTween.Sequence();
 
         seq.Append(transform.DOScale(0.95f, 0.1f));
