@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OpenCloseButtonHandler : MonoBehaviour
 {
+    public BackgroundPanelHandler backgroundPanel;
     public PanelHandler popupWindow;
     public PanelHandler closeWindow;
 
@@ -19,6 +20,7 @@ public class OpenCloseButtonHandler : MonoBehaviour
         seq.Play().OnComplete(() => {
             popupWindow.Show();
             closeWindow.Hide();
+            backgroundPanel.Hide();
         });
     }
 }
