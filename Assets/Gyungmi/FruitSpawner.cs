@@ -28,8 +28,7 @@ public class FruitSpawner : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        points = GameObject.Find("FruitSpawnPoint").GetComponentsInChildren<Transform>();
-        
+        points = GameObject.Find("FruitSpawnPoint").GetComponentsInChildren<Transform>(); 
     }
 
     public static FruitSpawner Instance
@@ -46,10 +45,7 @@ public class FruitSpawner : MonoBehaviour
     }
 
     void Start()
-    {
-        points = GameObject.Find("FruitSpawnPoint").GetComponentsInChildren<Transform>();
-
-        
+    { 
         if (points.Length > 0)
         {
             StartCoroutine(SpawnFruit());
@@ -67,7 +63,6 @@ public class FruitSpawner : MonoBehaviour
             fruitsList.Clear();
             int selection = Random.Range(0, fruits.Length); // °úÀÏ ÇÁ¸®ÆÕ ·£´ý ¼±ÅÃ
             GameObject selectedFruit = fruits[selection];
-            //int fruitCount = (int)GameObject.FindGameObjectsWithTag("Fruit").Length;
             createTime = 3f;
 
             if (fruitCount < maxNum)

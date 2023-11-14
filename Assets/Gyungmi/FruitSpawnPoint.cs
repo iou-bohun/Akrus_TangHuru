@@ -6,5 +6,5 @@ public class FruitSpawnPoint : MonoBehaviour
 {
     [SerializeField] bool isPlaceable;
 
-    public bool IsPlaceable { get { return isPlaceable; } }
+    public bool IsPlaceable { get { return isPlaceable; } set { isPlaceable = value; } }
 }
