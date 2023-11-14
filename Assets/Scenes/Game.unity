@@ -8468,7 +8468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundPanel: {fileID: 2064229164}
-  popupWindow: {fileID: 1117468459}
+  popupWindow: {fileID: 1737051862}
 --- !u!114 &570117269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23800,7 +23800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundPanel: {fileID: 545161764}
-  popupWindow: {fileID: 1117468459}
+  popupWindow: {fileID: 1161495606}
 --- !u!114 &1536870946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29047,7 +29047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundPanel: {fileID: 1080360778}
-  popupWindow: {fileID: 1117468459}
+  popupWindow: {fileID: 1682559745}
 --- !u!114 &1832317911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34298,7 +34298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2092883634622228045, guid: 05c15554758eb1841adda84497a7987b, type: 3}
       propertyPath: m_Name
-      value: "\uAD6C\uCE58\uC18C \uAD6C\uB9E4 \uD31D\uC5C5"
+      value: "\uC0E4\uC778\uBA38\uC2A4\uCEA3 \uAD6C\uCE58\uC18C \uAD6C\uB9E4 \uD31D\uC5C5"
       objectReference: {fileID: 0}
     - target: {fileID: 4723136883500460602, guid: 05c15554758eb1841adda84497a7987b, type: 3}
       propertyPath: backgroundPanel
