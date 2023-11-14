@@ -4094,12 +4094,12 @@ MonoBehaviour:
   blueberryFruit: 0
   startingGold: 150
   currentGold: 0
-  displayGold: {fileID: 0}
-  displayStarwberryTangHuru: {fileID: 0}
-  displayGrapeTanghuru: {fileID: 0}
-  displayOrangeTanghuru: {fileID: 0}
-  displayPineappleTanghuru: {fileID: 0}
-  displayBlueberryTanghuru: {fileID: 0}
+  displayGold: {fileID: 1041103468}
+  displayStarwberryTangHuru: {fileID: 1167505605}
+  displayGrapeTanghuru: {fileID: 1201143484}
+  displayOrangeTanghuru: {fileID: 2131145382}
+  displayPineappleTanghuru: {fileID: 1183793556}
+  displayBlueberryTanghuru: {fileID: 772678473}
   ruby: 0
   isFruitAvaliable: 0
   avaliableFruits: 

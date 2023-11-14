@@ -10,6 +10,6 @@ public class B_FruitScript : MonoBehaviour
 
     public void FruitDataInfo()
     {
-
+        
     }
 }
