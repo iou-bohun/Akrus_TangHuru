@@ -17,7 +17,7 @@ public class ExpControl : MonoBehaviour
     private float maxExp = 3;  //Exp의 max를 100으로 설정
     private float curExp = 0; //Exp의 초기값을 0으로 설정
 
-    private int level = 1;
+    public int level = 1;
 
     void Start()
     {

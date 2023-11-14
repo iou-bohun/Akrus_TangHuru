@@ -10,6 +10,7 @@ public class B_CameraMove : MonoBehaviour
 
     public void RightButtonMove()
     {
+        SoundManager.Instance.PlayTapSound();
         backgroundNum++;
         if(backgroundNum >= maxBackgroundNum)
         {
@@ -22,6 +23,7 @@ public class B_CameraMove : MonoBehaviour
 
     public void LeftButtonMove()
     {
+        SoundManager.Instance.PlayTapSound();
         backgroundNum--;
         if(backgroundNum < 0)
         {

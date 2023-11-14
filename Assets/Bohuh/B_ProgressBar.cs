@@ -63,6 +63,7 @@ public class B_ProgressBar : MonoBehaviour
     {
         if (DataManager.Instance.isFruitAvaliable == false) return;
         curTime -= 3f;
+        SoundManager.Instance.PlayTapSound();
     }
 
     /// <summary>
