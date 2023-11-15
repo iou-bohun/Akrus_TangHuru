@@ -2431,7 +2431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214688722}
   - component: {fileID: 214688724}
-  - component: {fileID: 214688723}
+  - component: {fileID: 214688725}
   m_Layer: 5
   m_Name: "\uBC30\uACBD\uC74C"
   m_TagString: Untagged
@@ -2460,21 +2460,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &214688723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214688721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8c5becc69c3fb43972c317f787dd6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleImage: {fileID: 616446583}
-  imageWhenOn: {fileID: 21300000, guid: 04fe29c41b205624a85902e64d340eb1, type: 3}
-  imageWhenOff: {fileID: 21300000, guid: 70cce601d02a55a4795029a7bbd416a9, type: 3}
 --- !u!114 &214688724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2522,7 +2507,23 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
+--- !u!114 &214688725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214688721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f87c5ff9594a2f43b007e8bf983a145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleImage: {fileID: 616446583}
+  imageWhenOn: {fileID: 21300000, guid: 04fe29c41b205624a85902e64d340eb1, type: 3}
+  imageWhenOff: {fileID: 21300000, guid: 70cce601d02a55a4795029a7bbd416a9, type: 3}
+  backgroundMusic: {fileID: 1985457628}
 --- !u!1 &216766936
 GameObject:
   m_ObjectHideFlags: 0
@@ -16859,7 +16860,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1013547443
 GameObject:
   m_ObjectHideFlags: 0
@@ -23840,7 +23841,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1350799431}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350799428}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1350799431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29317,7 +29330,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1706954808
 GameObject:
   m_ObjectHideFlags: 0
@@ -34695,7 +34708,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
