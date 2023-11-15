@@ -2645,6 +2645,7 @@ MonoBehaviour:
   imageWhenOn: {fileID: 21300000, guid: 04fe29c41b205624a85902e64d340eb1, type: 3}
   imageWhenOff: {fileID: 21300000, guid: 70cce601d02a55a4795029a7bbd416a9, type: 3}
   backgroundMusic: {fileID: 1985457628}
+<<<<<<< HEAD
 --- !u!1 &214968796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,6 +2782,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214968796}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 1ba085d (과일별 전시대 진열)
 --- !u!1 &216766936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5823,6 +5826,7 @@ MonoBehaviour:
   displayOrangeTanghuru: {fileID: 2131145382}
   displayPineappleTanghuru: {fileID: 1183793556}
   displayBlueberryTanghuru: {fileID: 772678473}
+  ruby: 0
   isFruitAvaliable: 0
   avaliableFruits: 
   level: 1
@@ -24136,11 +24140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ce68f94f9f549a14860e23a76f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   strawberryContainer: {fileID: 0}
   grapeContainer: {fileID: 0}
   orangeContaner: {fileID: 0}
   pineappleContainer: {fileID: 0}
   blueberryContainer: {fileID: 0}
+=======
+  strawberryContainer: {fileID: 85287208}
+  grapeContainer: {fileID: 1991759523}
+  orangeContaner: {fileID: 784719294}
+  pineappleContainer: {fileID: 1092641714}
+  blueberryContainer: {fileID: 1121082323}
+>>>>>>> parent of 1ba085d (과일별 전시대 진열)
 --- !u!1 &1261950120
 GameObject:
   m_ObjectHideFlags: 0
@@ -26785,6 +26797,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386574330}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1388427693
 GameObject:
   m_ObjectHideFlags: 0
@@ -26878,6 +26891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42b147df1a9e6748a845ac8abeb5607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of 1ba085d (과일별 전시대 진열)
 --- !u!1 &1394154922
 GameObject:
   m_ObjectHideFlags: 0
