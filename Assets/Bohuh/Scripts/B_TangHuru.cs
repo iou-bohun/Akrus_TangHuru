@@ -36,21 +36,12 @@ public class B_TangHuru : MonoBehaviour
     {
         thisTangHuru = (int)DataManager.Instance.selectedFruit;
         collide.enabled = false;
-<<<<<<< Updated upstream
         curTime = 0;
         strawberryContainer = ContainerManager.Instance.strawberryContainer.GetComponent<Transform>();
         grapeContainer = ContainerManager.Instance.grapeContainer.GetComponent<Transform>();
         orangeContainer = ContainerManager.Instance.orangeContaner.GetComponent<Transform>();
         pineappleContainer = ContainerManager.Instance.pineappleContainer.GetComponent<Transform>();
         blueberryContainer = ContainerManager.Instance.blueberryContainer.GetComponent<Transform>();
-=======
-        curTime = 0; 
-        strawberryContainer = B_GameManager.Instance.strawberryContainer.GetComponent<Transform>();
-        grapeContainer = B_GameManager.Instance.grapeContainer.GetComponent<Transform>();
-        orangeContainer = B_GameManager.Instance.orangeContaner.GetComponent<Transform>();
-        pineappleContainer = B_GameManager.Instance.pineappleContainer.GetComponent<Transform>();
-        blueberryContainer = B_GameManager.Instance.blueberryContainer.GetComponent<Transform>();
->>>>>>> Stashed changes
         thisPosition = B_Spawnner.Instance.randomSpawnPoint;
         thisSprite.sprite = originalTangHuru[selectedFruit];
     }
