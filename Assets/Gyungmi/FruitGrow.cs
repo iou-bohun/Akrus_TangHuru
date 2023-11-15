@@ -103,11 +103,10 @@ public class FruitGrow : MonoBehaviour
     public void Gathering()
     {
         isGathering = true;
-        curImage.GetComponent<Button>().interactable = false;
-
         Color color = curImage.color;
         color.a = 0;
         curImage.color = color;
+        curImage.GetComponent<Button>().interactable = false;
 
         if (fruitName == "strawberry")
         {

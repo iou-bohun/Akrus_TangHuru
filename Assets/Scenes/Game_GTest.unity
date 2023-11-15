@@ -5357,6 +5357,7 @@ MonoBehaviour:
   displayGrapeContena: {fileID: 914550218}
   displayOrangeContena: {fileID: 1455599735}
   displayPineappleContena: {fileID: 1014628212}
+  displayBlueberryContena: {fileID: 0}
   startingGold: 150
   currentGold: 0
   displayGold: {fileID: 1041103468}
@@ -34994,6 +34995,7 @@ MonoBehaviour:
   audioSource: {fileID: 1985457628}
   tapClip: {fileID: 8300000, guid: 4988f6e4cc53b0c44be354cb8b419df3, type: 3}
   rolletClip: {fileID: 8300000, guid: 61a6e2f6ce0a11c47b7a8b6af4ba17be, type: 3}
+  soundToggle: {fileID: 0}
 --- !u!1 &1991759521
 GameObject:
   m_ObjectHideFlags: 0
