@@ -9,19 +9,19 @@ public class PanelHandler : MonoBehaviour
     void Start()
     {
         DOTween.Init();
-        // transform ÀÇ scale °ªÀ» ¸ðµÎ 0.1f·Î º¯°æÇÕ´Ï´Ù.
+        // transform ï¿½ï¿½ scale ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 0.1fï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         transform.localScale = Vector3.one * 0.1f;
-        // °´Ã¼¸¦ ºñÈ°¼ºÈ­ ÇÕ´Ï´Ù.
+        // ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½Õ´Ï´ï¿½.
         gameObject.SetActive(false);
     }
     public void Show()
     {
         gameObject.SetActive(true);
 
-        // DOTween ÇÔ¼ö¸¦ Â÷·Ê´ë·Î ¼öÇàÇÏ°Ô ÇØÁÝ´Ï´Ù.
+        // DOTween ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Ý´Ï´ï¿½.
         var seq = DOTween.Sequence();
 
-        // DOScale ÀÇ Ã¹ ¹øÂ° ÆÄ¶ó¹ÌÅÍ´Â ¸ñÇ¥ Scale °ª, µÎ ¹øÂ°´Â ½Ã°£ÀÔ´Ï´Ù.
+        // DOScale ï¿½ï¿½ Ã¹ ï¿½ï¿½Â° ï¿½Ä¶ï¿½ï¿½ï¿½Í´ï¿½ ï¿½ï¿½Ç¥ Scale ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½Â°ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½Ô´Ï´ï¿½.
         seq.Append(transform.DOScale(1.1f, 0.2f));
         seq.Append(transform.DOScale(1f, 0.1f));
 
@@ -37,9 +37,9 @@ public class PanelHandler : MonoBehaviour
         seq.Append(transform.DOScale(1.1f, 0.1f));
         seq.Append(transform.DOScale(0.2f, 0.2f));
 
-        // OnComplete ´Â seq ¿¡ ¼³Á¤ÇÑ ¾Ö´Ï¸ÞÀÌ¼ÇÀÇ ÇÃ·¹ÀÌ°¡ ¿Ï·áµÇ¸é
-        // { } ¾È¿¡ ÀÖ´Â ÄÚµå°¡ ¼öÇàµÈ´Ù´Â ÀÇ¹ÌÀÔ´Ï´Ù.
-        // ¿©±â¼­´Â ´Ý±â ¾Ö´Ï¸ÞÀÌ¼ÇÀÌ ¿Ï·áµÈ ÈÄ °´Ã¿¸£ ºñÈ°¼ºÈ­ ÇÕ´Ï´Ù.
+        // OnComplete ï¿½ï¿½ seq ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì°ï¿½ ï¿½Ï·ï¿½Ç¸ï¿½
+        // { } ï¿½È¿ï¿½ ï¿½Ö´ï¿½ ï¿½Úµå°¡ ï¿½ï¿½ï¿½ï¿½È´Ù´ï¿½ ï¿½Ç¹ï¿½ï¿½Ô´Ï´ï¿½.
+        // ï¿½ï¿½ï¿½â¼­ï¿½ï¿½ ï¿½Ý±ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã¿ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½Õ´Ï´ï¿½.
         seq.Play().OnComplete(() =>
         {
             gameObject.SetActive(false);
