@@ -10,7 +10,7 @@ public class PanelHandler : MonoBehaviour
     {
         DOTween.Init();
         // transform 의 scale 값을 모두 0.1f로 변경합니다.
-        transform.localScale = Vector3.one * 0.1f;
+        //transform.localScale = Vector3.one * 0.1f;
         // 객체를 비활성화 합니다.
         gameObject.SetActive(false);
     }
