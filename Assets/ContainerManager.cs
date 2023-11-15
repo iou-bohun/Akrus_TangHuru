@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class B_GameManager : MonoBehaviour
+public class ContainerManager : MonoBehaviour
 {
-    private static B_GameManager instance;
+    private static ContainerManager instance;
+
+    public B_RestingContainer strawberryContainer;
+    public B_RestingContainer grapeContainer;
+    public B_RestingContainer orangeContaner;
+    public B_RestingContainer pineappleContainer;
+    public B_RestingContainer blueberryContainer;
 
     private void Awake()
     {
@@ -18,16 +24,17 @@ public class B_GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public static B_GameManager Instance
+    public static ContainerManager Instance
     {
         get
         {
-            if(null == instance)
+            if (null == instance)
             {
                 return null;
             }
             return instance;
         }
     }
+
+
 }

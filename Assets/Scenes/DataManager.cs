@@ -58,7 +58,6 @@ public class DataManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayOrangeTanghuru;
     [SerializeField] TextMeshProUGUI displayPineappleTanghuru;
     [SerializeField] TextMeshProUGUI displayBlueberryTanghuru;
-    public int ruby;
     public bool isFruitAvaliable = false;
     public List<FruitType> avaliableFruits = new List<FruitType>();
 
@@ -126,7 +125,7 @@ public class DataManager : MonoBehaviour
     /// </summary>
     void UpdateDisplay()
     {
-        displayGold.text = "Gold:" + currentGold;
+        displayGold.text = "" + currentGold;
     }
 
     /// <summary>
