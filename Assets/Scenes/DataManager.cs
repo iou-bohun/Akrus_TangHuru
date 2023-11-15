@@ -43,7 +43,7 @@ public class DataManager : MonoBehaviour
     public int pineappleTangHuru;
     public int blueberryTangHuru;
 
-    public int sellingStarwberryTangHuru;
+    public int sellingStarwberryTangHuru=0;
 
     // �����̳�
     public int strawberryFruit;

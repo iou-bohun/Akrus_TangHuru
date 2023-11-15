@@ -4934,6 +4934,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8e7fefe5cdaf12b41bc28ae02d178767, type: 3}
   - {fileID: 21300000, guid: 2d3db47098fbc304f8df067e00577ca1, type: 3}
   - {fileID: 21300000, guid: e345bca2241ad80428759386422b8227, type: 3}
+  originalTangHuru:
+  - {fileID: 21300000, guid: e3081bf2aa13ef2469efe6edfd72d94d, type: 3}
+  - {fileID: 21300000, guid: af818644286df06418ebc243566ac9d2, type: 3}
+  - {fileID: 21300000, guid: f34e5f504b7f1d5459294a015de834ca, type: 3}
+  - {fileID: 21300000, guid: 3f0ca8ad41b98de459ace7cf5c2739bc, type: 3}
+  - {fileID: 21300000, guid: 3a906cca3e45e10458c99f58539e0787, type: 3}
   selectedFruit: 0
 --- !u!70 &1015771642699557524
 CapsuleCollider2D:
