@@ -18,6 +18,7 @@ public class B_TangHuru : MonoBehaviour
 
     SpriteRenderer thisSprite;
     [SerializeField] Sprite[] CotingTangHuru;
+    [SerializeField] Sprite[] originalTangHuru;
     [SerializeField] int selectedFruit;
 
     Vector3 mousePositionOffset;
@@ -35,12 +36,14 @@ public class B_TangHuru : MonoBehaviour
     {
         thisTangHuru = (int)DataManager.Instance.selectedFruit;
         collide.enabled = false;
+        curTime = 0;
         strawberryContainer = B_GameManager.Instance.strawberryContainer.GetComponent<Transform>();
         grapeContainer = B_GameManager.Instance.grapeContainer.GetComponent<Transform>();
         orangeContainer = B_GameManager.Instance.orangeContaner.GetComponent<Transform>();
         pineappleContainer = B_GameManager.Instance.pineappleContainer.GetComponent<Transform>();
         blueberryContainer = B_GameManager.Instance.blueberryContainer.GetComponent<Transform>();
         thisPosition = B_Spawnner.Instance.randomSpawnPoint;
+        thisSprite.sprite = originalTangHuru[selectedFruit];
     }
 
     private void Update()
