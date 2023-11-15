@@ -35,6 +35,8 @@ public class DataManager : MonoBehaviour
     public FruitType growFruit; // �ڶ�� ���� ����
     public FruitState growState;
 
+    public int sellingTangHuru = 0;
+
     public int strawberryTangHuru;
     public int grapeTangHuru;
     public int orangeTangHuru;

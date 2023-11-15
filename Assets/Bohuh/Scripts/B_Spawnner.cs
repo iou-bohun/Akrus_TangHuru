@@ -8,7 +8,6 @@ public class B_Spawnner : MonoBehaviour
 {
     private static B_Spawnner instance;
     [SerializeField] Transform[] spawnPoints;
-    [SerializeField] List<GameObject> spawnPointsList;
     B_SpawnManager spawnManager;
     public Transform randomSpawnPoint;
     Vector3 position;
