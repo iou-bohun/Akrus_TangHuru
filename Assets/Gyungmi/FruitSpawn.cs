@@ -7,8 +7,6 @@ public class FruitSpawn : MonoBehaviour
 {
     public FruitData[] fruitData;
     [SerializeField]
-    private int MaxFruitsType;
-    [SerializeField]
     private GameObject[] fruits;
 
     void Start()

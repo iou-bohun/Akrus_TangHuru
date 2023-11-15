@@ -12,13 +12,6 @@ public enum FruitType
     blueberry
 }
 
-public enum FruitState
-{
-    noneTime,
-    flowerTime,
-    midTime
-}
-
 public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
@@ -33,7 +26,6 @@ public class DataManager : MonoBehaviour
     };
     public FruitType selectedFruit;
     public FruitType growFruit; // �ڶ�� ���� ����
-    public FruitState growState;
 
     public int sellingTangHuru = 0;
 

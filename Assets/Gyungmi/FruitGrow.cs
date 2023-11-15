@@ -109,20 +109,25 @@ public class FruitGrow : MonoBehaviour
         color.a = 0;
         curImage.color = color;
 
-        for(int i = 0; i < fruitSpawn.fruitData.Length; i++)
+        if (fruitName == "strawberry")
         {
-            if(fruitName == fruitSpawn.fruitData[i].FruitName)
-            {
-                foreach(var fruit in DataManager.Instance.fruitCounts)
-                {
-                    if (fruit.Key.Equals(fruitName))
-                    {
-                        //DataManager.Instance.fruitCounts.Values++;
-                    }
-                }
-            }
+            DataManager.Instance.fruitCounts[FruitType.Strawberry]++;
         }
-
-
+        else if (fruitName == "blueberry")
+        {
+            DataManager.Instance.fruitCounts[FruitType.blueberry]++;
+        }
+        else if (fruitName == "orange")
+        {
+            DataManager.Instance.fruitCounts[FruitType.orange]++;
+        }
+        else if (fruitName == "grape")
+        {
+            DataManager.Instance.fruitCounts[FruitType.Grape]++;
+        }
+        else if (fruitName == "pineapple")
+        {
+            DataManager.Instance.fruitCounts[FruitType.pineapple]++;
+        }
     }
 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 15648989}
   - component: {fileID: 15648988}
   - component: {fileID: 15648987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 54231932}
   - component: {fileID: 54231931}
   - component: {fileID: 54231930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &91073401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,7 +2125,7 @@ GameObject:
   - component: {fileID: 198527541}
   - component: {fileID: 198527540}
   - component: {fileID: 198527539}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,7 +2771,7 @@ GameObject:
   - component: {fileID: 231311097}
   - component: {fileID: 231311096}
   - component: {fileID: 231311095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3593,7 +3593,7 @@ GameObject:
   - component: {fileID: 254597276}
   - component: {fileID: 254597275}
   - component: {fileID: 254597274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7511,7 +7511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &482485885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7597,7 +7597,8 @@ GameObject:
   m_Component:
   - component: {fileID: 482779524}
   - component: {fileID: 482779523}
-  m_Layer: 0
+  - component: {fileID: 482779525}
+  m_Layer: 3
   m_Name: Fruit (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -7648,6 +7649,18 @@ Transform:
   - {fileID: 198527541}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &482779525
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482779522}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &484588770
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,8 +7827,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1851840850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.698, y: 0}
+  m_AnchorMax: {x: 0.698, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8764,7 +8777,7 @@ GameObject:
   - component: {fileID: 500575131}
   - component: {fileID: 500575129}
   - component: {fileID: 500575130}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8931,7 +8944,7 @@ GameObject:
   - component: {fileID: 522026749}
   - component: {fileID: 522026748}
   - component: {fileID: 522026747}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9091,7 +9104,7 @@ GameObject:
   - component: {fileID: 540436978}
   - component: {fileID: 540436976}
   - component: {fileID: 540436977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10129,7 +10142,7 @@ GameObject:
   - component: {fileID: 625847589}
   - component: {fileID: 625847588}
   - component: {fileID: 625847587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10745,7 +10758,7 @@ GameObject:
   - component: {fileID: 662710811}
   - component: {fileID: 662710810}
   - component: {fileID: 662710809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11100,7 +11113,8 @@ GameObject:
   m_Component:
   - component: {fileID: 666799918}
   - component: {fileID: 666799917}
-  m_Layer: 0
+  - component: {fileID: 666799919}
+  m_Layer: 3
   m_Name: FruitSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11157,6 +11171,18 @@ Transform:
   - {fileID: 1285344183}
   m_Father: {fileID: 295477181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &666799919
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666799916}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &676149886
 GameObject:
   m_ObjectHideFlags: 0
@@ -11377,7 +11403,7 @@ GameObject:
   - component: {fileID: 678204401}
   - component: {fileID: 678204400}
   - component: {fileID: 678204399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12611,7 +12637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &742963608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12674,7 +12700,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &742963611
 Canvas:
   m_ObjectHideFlags: 0
@@ -13336,7 +13362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &795040852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14345,7 +14371,7 @@ GameObject:
   - component: {fileID: 827216684}
   - component: {fileID: 827216682}
   - component: {fileID: 827216683}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14658,7 +14684,7 @@ GameObject:
   - component: {fileID: 853702113}
   - component: {fileID: 853702112}
   - component: {fileID: 853702111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15808,7 +15834,7 @@ GameObject:
   - component: {fileID: 929323233}
   - component: {fileID: 929323231}
   - component: {fileID: 929323232}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16436,7 +16462,7 @@ GameObject:
   - component: {fileID: 953977191}
   - component: {fileID: 953977190}
   - component: {fileID: 953977189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17093,7 +17119,7 @@ GameObject:
   - component: {fileID: 1020332473}
   - component: {fileID: 1020332471}
   - component: {fileID: 1020332472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18898,7 +18924,7 @@ GameObject:
   - component: {fileID: 1101203718}
   - component: {fileID: 1101203717}
   - component: {fileID: 1101203716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18980,7 +19006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1104627127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19624,7 +19650,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1129969737}
   - component: {fileID: 1129969736}
-  m_Layer: 0
+  - component: {fileID: 1129969738}
+  m_Layer: 3
   m_Name: Fruit (2)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -19675,6 +19702,18 @@ Transform:
   - {fileID: 625847589}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1129969738
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129969735}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1130423568
 GameObject:
   m_ObjectHideFlags: 0
@@ -20009,7 +20048,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1140462839}
   - component: {fileID: 1140462838}
-  m_Layer: 0
+  - component: {fileID: 1140462840}
+  m_Layer: 3
   m_Name: Fruit (5)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -20060,6 +20100,18 @@ Transform:
   - {fileID: 231311097}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1140462840
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140462837}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1146351978
 GameObject:
   m_ObjectHideFlags: 0
@@ -20898,7 +20950,7 @@ GameObject:
   - component: {fileID: 1185912590}
   - component: {fileID: 1185912589}
   - component: {fileID: 1185912588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21896,7 +21948,7 @@ GameObject:
   - component: {fileID: 1229559544}
   - component: {fileID: 1229559543}
   - component: {fileID: 1229559542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22168,7 +22220,7 @@ GameObject:
   - component: {fileID: 1261950123}
   - component: {fileID: 1261950122}
   - component: {fileID: 1261950121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22560,7 +22612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1285344183}
   - component: {fileID: 1285344182}
-  m_Layer: 0
+  - component: {fileID: 1285344184}
+  m_Layer: 3
   m_Name: Fruit (7)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -22611,6 +22664,18 @@ Transform:
   - {fileID: 953977191}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1285344184
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285344181}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1288871485
 GameObject:
   m_ObjectHideFlags: 0
@@ -23011,7 +23076,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1313089626}
   - component: {fileID: 1313089625}
-  m_Layer: 0
+  - component: {fileID: 1313089627}
+  m_Layer: 3
   m_Name: Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -23062,6 +23128,18 @@ Transform:
   - {fileID: 678204401}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1313089627
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313089624}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1321050593
 GameObject:
   m_ObjectHideFlags: 0
@@ -24118,7 +24196,7 @@ GameObject:
   - component: {fileID: 1378231641}
   - component: {fileID: 1378231640}
   - component: {fileID: 1378231639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24418,7 +24496,7 @@ GameObject:
   - component: {fileID: 1394154925}
   - component: {fileID: 1394154924}
   - component: {fileID: 1394154923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25093,7 +25171,7 @@ GameObject:
   - component: {fileID: 1412053896}
   - component: {fileID: 1412053894}
   - component: {fileID: 1412053895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25685,7 +25763,7 @@ GameObject:
   - component: {fileID: 1485478137}
   - component: {fileID: 1485478136}
   - component: {fileID: 1485478135}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25887,7 +25965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1508588852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25950,7 +26028,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1508588855
 Canvas:
   m_ObjectHideFlags: 0
@@ -26866,7 +26944,7 @@ GameObject:
   - component: {fileID: 1569423586}
   - component: {fileID: 1569423585}
   - component: {fileID: 1569423584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27344,7 +27422,7 @@ GameObject:
   - component: {fileID: 1592220503}
   - component: {fileID: 1592220501}
   - component: {fileID: 1592220502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28330,7 +28408,7 @@ GameObject:
   - component: {fileID: 1658106820}
   - component: {fileID: 1658106819}
   - component: {fileID: 1658106818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29969,7 +30047,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1731277512}
   - component: {fileID: 1731277511}
-  m_Layer: 0
+  - component: {fileID: 1731277513}
+  m_Layer: 3
   m_Name: Fruit (3)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -30020,6 +30099,18 @@ Transform:
   - {fileID: 1378231641}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1731277513
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731277510}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1001 &1737051860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30478,7 +30569,7 @@ GameObject:
   - component: {fileID: 1750714809}
   - component: {fileID: 1750714808}
   - component: {fileID: 1750714807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlowerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30853,7 +30944,7 @@ RectTransform:
   m_Father: {fileID: 237677670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.698, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -31336,7 +31427,7 @@ GameObject:
   - component: {fileID: 1799923391}
   - component: {fileID: 1799923390}
   - component: {fileID: 1799923389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31877,7 +31968,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1829068870}
   - component: {fileID: 1829068869}
-  m_Layer: 0
+  - component: {fileID: 1829068871}
+  m_Layer: 3
   m_Name: Fruit (6)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -31928,6 +32020,18 @@ Transform:
   - {fileID: 522026749}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1829068871
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829068868}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1829109996
 GameObject:
   m_ObjectHideFlags: 0
@@ -32589,7 +32693,7 @@ GameObject:
   - component: {fileID: 1868660603}
   - component: {fileID: 1868660601}
   - component: {fileID: 1868660602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36156,7 +36260,7 @@ GameObject:
   - component: {fileID: 2073503632}
   - component: {fileID: 2073503631}
   - component: {fileID: 2073503630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36800,7 +36904,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2112806605}
   - component: {fileID: 2112806604}
-  m_Layer: 0
+  - component: {fileID: 2112806606}
+  m_Layer: 3
   m_Name: Fruit (4)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -36851,6 +36956,18 @@ Transform:
   - {fileID: 2126047985}
   m_Father: {fileID: 666799918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2112806606
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112806603}
+  m_Enabled: 1
+  m_SortingLayerID: -240281119
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2115101139
 GameObject:
   m_ObjectHideFlags: 0
@@ -37130,7 +37247,7 @@ GameObject:
   - component: {fileID: 2126047985}
   - component: {fileID: 2126047984}
   - component: {fileID: 2126047983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FruitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
