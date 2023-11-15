@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip tapClip;
     public AudioClip rolletClip;
+    public Toggle soundToggle; // 이 토글은 사운드를 제어하는 데 사용됩니다.
 
 
     private void Awake()
@@ -38,11 +40,17 @@ public class SoundManager : MonoBehaviour
 
     public void PlayTapSound()
     {
-        audioSource.PlayOneShot(tapClip);
+        if (soundToggle.isOn) // 토글이 켜져 있는 경우에만 사운드 재생
+        {
+            audioSource.PlayOneShot(tapClip);
+        }
     }
 
     public void playRulletSound()
     {
-        audioSource.PlayOneShot(rolletClip); 
+        if (soundToggle.isOn) // 토글이 켜져 있는 경우에만 사운드 재생
+        {
+            audioSource.PlayOneShot(rolletClip);
+        }
     }
 }

@@ -40,7 +40,7 @@ public class BackgroundToggle : MonoBehaviour
             // ¹è°æÀ½¾ÇÀ» ²ü´Ï´Ù.
             if (backgroundMusic != null)
             {
-                backgroundMusic.Pause();
+                backgroundMusic.Stop();
             }
         }
     }
