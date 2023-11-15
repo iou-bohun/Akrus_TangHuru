@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class G_FruitSpawn : MonoBehaviour
 {
-    FruitData fruitData;
+    FruitData[] fruitData;
     public static G_FruitSpawn instance;
     [SerializeField]
     private List<FruitData> fruitDatas = new List<FruitData>(); // 과일 종류
     [SerializeField]
     private GameObject fruitPrefab;
 
+    
+
     public Transform[] points; // 스폰 포인트
     Transform curSpawnPoint;
     FruitData selectedFruit;
-    public Transform randomPoint;
     Vector3 position;
     private Sprite sprite;
+    int idx;
 
     public List<FruitData> fruitList = new List<FruitData>(); // 랜덤선택한 과일이 들어갈 리스트
     
@@ -50,9 +52,8 @@ public class G_FruitSpawn : MonoBehaviour
     public void randomSelect()
     {
         int selection = 0;
-        if (fruitList.Count < 9)
+        if (fruitList.Count < 8)
         {
-            
             selection = Random.Range(0, fruitDatas.Count);
             selectedFruit = fruitDatas[selection];
             fruitList.Add(selectedFruit); // 랜덤으로 선택된 과일을 fruitList에 추가
@@ -63,14 +64,15 @@ public class G_FruitSpawn : MonoBehaviour
 
     public IEnumerator SpawnFruit()
     {
+        
         if(fruitList.Count <= maxNum)
         { 
             curSpawnPoint = null;
-            while (curSpawnPoint == null)
+            while(fruitList.Count < 9)
             {
                 randomSelect();
                 int randomFruit = Random.Range(0, fruitDatas.Count);
-                int idx = Random.Range(0, points.Length); // 랜덤 스폰포인트 위치를 찾아서
+                idx = Random.Range(0, points.Length); // 랜덤 스폰포인트 위치를 찾아서
                 if (points[idx].GetComponent<FruitSpawnPoint>().IsPlaceable == true) // 만약 고른 스폰포인트의 isplaceable이 true이면 
                 {
                     yield return new WaitForSeconds(selectedFruit.None_time);
@@ -78,15 +80,22 @@ public class G_FruitSpawn : MonoBehaviour
                     position = curSpawnPoint.position;
                     var fruit = SpawnFunc((FruitType)randomFruit);
                     sprite = selectedFruit.FlowerSprite;
-                    //Instantiate(selectedFruit, points[idx].position, points[idx].rotation);
+                    Instantiate(fruit, position, points[idx].rotation);
                 }
-                else
-                {
-                    yield return null;
-                }
+                //else
+                //{
+                    //yield return null;
+                //}
    
             }   
         }
+        /*
+        randomSelect();
+        int randomFruit = Random.Range(0, fruitDatas.Count);
+        yield return new WaitForSeconds(selectedFruit.None_time);
+        var fruit = SpawnFunc((FruitType)randomFruit);
+        sprite = selectedFruit.FlowerSprite;
+        */
     }
 
     public B_FruitScript SpawnFunc(FruitType type)

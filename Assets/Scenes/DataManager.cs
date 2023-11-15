@@ -70,11 +70,6 @@ public class DataManager : MonoBehaviour
     float pineapplePrepTime = 36f;
     float blueberryPrepTime = 36f;
 
-    public float strawberryGrowTime = 5f;
-    float grapeGrowTime = 7f;
-    float orangeGrowTime = 9f;
-    float pineappleGrowTime = 11f;
-    float blueberryGrowTime = 13f;
 
     public int level = 1;
 
