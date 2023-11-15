@@ -44,6 +44,12 @@ public class DataManager : MonoBehaviour
     public int pineappleFruit;
     public int blueberryFruit;
 
+    [SerializeField] TextMeshProUGUI displayStrawberryContena;
+    [SerializeField] TextMeshProUGUI displayGrapeContena;
+    [SerializeField] TextMeshProUGUI displayOrangeContena;
+    [SerializeField] TextMeshProUGUI displayPineappleContena;
+    [SerializeField] TextMeshProUGUI displayBlueberryContena;
+
     [SerializeField] int startingGold = 150;
     [SerializeField] int currentGold;
     [SerializeField] TextMeshProUGUI displayGold;
@@ -95,6 +101,7 @@ public class DataManager : MonoBehaviour
         CheckFruitCount();
         UpdateDisplay();
         UpdateStarawberryTangHuru();
+        ContenaDisplay();
     }
 
     /// <summary>
@@ -132,6 +139,15 @@ public class DataManager : MonoBehaviour
         displayOrangeTanghuru.text = orangeTangHuru.ToString();
         displayPineappleTanghuru.text = pineappleTangHuru.ToString();
         displayBlueberryTanghuru.text = blueberryTangHuru.ToString();
+    }
+    
+    void ContenaDisplay()
+    {
+        displayStrawberryContena.text = fruitCounts[FruitType.Strawberry].ToString();
+        displayGrapeContena.text = fruitCounts[FruitType.Grape].ToString();
+        displayOrangeContena.text = fruitCounts[FruitType.orange].ToString();
+        displayPineappleContena.text = fruitCounts[FruitType.pineapple].ToString();
+        displayBlueberryContena.text = fruitCounts[FruitType.blueberry].ToString();
     }
 
     /// <summary>
