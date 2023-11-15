@@ -73,9 +73,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6864023545001400586, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
+      propertyPath: CotingTangHuru.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864023545001400586, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
       propertyPath: originalTangHuru.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6864023545001400586, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
+      propertyPath: CotingTangHuru.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: e3081bf2aa13ef2469efe6edfd72d94d, type: 3}
     - target: {fileID: 6864023545001400586, guid: c5f21ed92325417429180a79c517d9a0, type: 3}
       propertyPath: originalTangHuru.Array.data[0]
       value: 
