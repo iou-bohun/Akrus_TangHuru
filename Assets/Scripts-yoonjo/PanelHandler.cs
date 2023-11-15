@@ -32,10 +32,11 @@ public class PanelHandler : MonoBehaviour
     {
         var seq = DOTween.Sequence();
 
-        //transform.localScale = Vector3.one * 0.2f; // 팝업창 넘길 시 스케일이 0.2로 줄어듦
+        //transform.localScale = Vector3.one * 0.2f; // 팝업창 넘길 시 스케일이 0.2로 줄어들어 주석
 
         seq.Append(transform.DOScale(1.1f, 0.1f));
-        //seq.Append(transform.DOScale(0.2f, 0.2f));
+        //seq.Append(transform.DOScale(0.2f, 0.2f)); // 팝업창 넘길 시 스케일이 0.2로 줄어들어 주석
+
 
         // OnComplete 는 seq 에 설정한 애니메이션의 플레이가 완료되면
         // { } 안에 있는 코드가 수행된다는 의미입니다.
