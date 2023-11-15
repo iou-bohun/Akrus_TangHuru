@@ -52,6 +52,17 @@ public class RouletteController : MonoBehaviour
         }
     }
 
+    public void PlayRouletteSound()
+    {
+        SoundManager.Instance.PlayTapSound();
+        if (!isSpinning)
+        {
+            SoundManager.Instance.playRulletSound(); // SoundManager¿« playRulletSound() »£√‚
+        }
+        
+        SpinRoulette();
+    }
+
     public void SpinRoulette()
     {
         if (!isSpinning)

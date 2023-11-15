@@ -26,6 +26,7 @@ public class ToggleUi : MonoBehaviour
     {
         if (on)
             toggleImage.sprite = imageWhenOn;
+
         else
             toggleImage.sprite = imageWhenOff;
     }
