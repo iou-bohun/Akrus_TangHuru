@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class SellingProgressBar : MonoBehaviour
     float curTime = 30;
     float maxTime = 30;
 
+
     private void OnEnable()
     {
         curTime = (float)maxTime;
@@ -17,7 +19,7 @@ public class SellingProgressBar : MonoBehaviour
 
     private void Update()
     {
-        if (DataManager.Instance.sellingTangHuru >= 1)
+        if (DataManager.Instance.sellingTangHuru >= 1 && B_GameManager.Instance.isBuyReady)
         {
             slider.gameObject.SetActive(true);
             curTime -= Time.deltaTime;
@@ -43,11 +45,16 @@ public class SellingProgressBar : MonoBehaviour
         {
             curTime = (float)maxTime;
             slider.gameObject.SetActive(false);
-            foreach(var tangHuru in DataManager.Instance.sellingTanghurus)
+            Debug.Log("°ñŠÙ¤·°¡");
+            DataManager.Instance.Deposit(100);
+            B_GameManager.Instance.isBuyReady = false;
+            B_GameManager.Instance.buySuccess = true;
+            foreach (var tangHuru in DataManager.Instance.sellingTanghurus)
             {
                 DataManager.Instance.sellingTanghurus.Remove(tangHuru);
                 Destroy(tangHuru);
             }
+            
         }
     }
 }

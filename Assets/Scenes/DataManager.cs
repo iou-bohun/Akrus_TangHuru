@@ -52,7 +52,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayPineappleContena;
     [SerializeField] TextMeshProUGUI displayBlueberryContena;
 
-    [SerializeField] int startingGold = 150;
+    [SerializeField] int startingGold =0;
     [SerializeField] int currentGold;
     [SerializeField] TextMeshProUGUI displayGold;
     [SerializeField] TextMeshProUGUI displayStarwberryTangHuru;
