@@ -1316,7 +1316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb54096fc51e484bb1e32951928cd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelUIText: {fileID: 1341369868}
+  levelText: {fileID: 331602809}
+  expText: {fileID: 1996654905}
   slider: {fileID: 1756796369}
+  expbar: {fileID: 1201782599}
+  level: 1
 --- !u!1 &100379960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5734,7 +5739,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331602807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8e2bc62ad25b254590e51bc89e59b56, type: 3}
   m_Name: 
@@ -5743,6 +5748,8 @@ MonoBehaviour:
   levelText: {fileID: 331602809}
   expText: {fileID: 1996654905}
   expbar: {fileID: 1201782599}
+  maxExp: 3
+  curExp: 0
   level: 1
 --- !u!1 &334677392
 GameObject:
@@ -37722,7 +37729,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910846142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8e2bc62ad25b254590e51bc89e59b56, type: 3}
   m_Name: 
@@ -37731,6 +37738,8 @@ MonoBehaviour:
   levelText: {fileID: 331602809}
   expText: {fileID: 1996654905}
   expbar: {fileID: 1201782599}
+  maxExp: 3
+  curExp: 0
   level: 1
 --- !u!114 &1910846146
 MonoBehaviour:
