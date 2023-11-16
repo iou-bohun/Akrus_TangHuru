@@ -3320,7 +3320,7 @@ GameObject:
   - component: {fileID: 240960465}
   - component: {fileID: 240960464}
   m_Layer: 5
-  m_Name: FirstPrep
+  m_Name: OrangeFirstPrep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3388,7 +3388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 240960465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694759145}
+        m_TargetAssemblyTypeName: ContainerManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &240960465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5325,6 +5337,7 @@ MonoBehaviour:
   orangeFruit: 0
   pineappleFruit: 0
   blueberryFruit: 0
+  isFirstPrep: 0
   displayStrawberryContena: {fileID: 1195338086}
   displayGrapeContena: {fileID: 1637972860}
   displayOrangeContena: {fileID: 1618501117}
@@ -10612,7 +10625,7 @@ GameObject:
   - component: {fileID: 627186780}
   - component: {fileID: 627186779}
   m_Layer: 5
-  m_Name: FirstPrep
+  m_Name: PineappleFirstPrep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10680,7 +10693,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 627186780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694759145}
+        m_TargetAssemblyTypeName: ContainerManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &627186780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24017,7 +24042,7 @@ GameObject:
   - component: {fileID: 1322254095}
   - component: {fileID: 1322254094}
   m_Layer: 5
-  m_Name: FirstPrep
+  m_Name: GrapeFirstPrep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24085,7 +24110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1322254095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694759145}
+        m_TargetAssemblyTypeName: ContainerManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1322254095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27134,7 +27171,7 @@ GameObject:
   - component: {fileID: 1497357836}
   - component: {fileID: 1497357835}
   m_Layer: 5
-  m_Name: FirstPrep
+  m_Name: StrawberryFirstPrep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27202,7 +27239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1497357836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694759145}
+        m_TargetAssemblyTypeName: ContainerManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1497357836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28392,7 +28441,7 @@ GameObject:
   - component: {fileID: 1555301422}
   - component: {fileID: 1555301421}
   m_Layer: 5
-  m_Name: FirstPrep
+  m_Name: BluebeeryFirstPrep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28460,7 +28509,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555301422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694759145}
+        m_TargetAssemblyTypeName: ContainerManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1555301422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31460,6 +31521,12 @@ MonoBehaviour:
   orangeContaner: {fileID: 784719294}
   pineappleContainer: {fileID: 1092641714}
   blueberryContainer: {fileID: 1121082323}
+  strawberryFirst: {fileID: 1497357835}
+  grapeFirst: {fileID: 1322254094}
+  orangeFirst: {fileID: 240960464}
+  pineappleFirst: {fileID: 627186779}
+  blueberryFirst: {fileID: 1555301421}
+  selectedFirst: {fileID: 0}
 --- !u!1 &1698359576
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,6 +48,7 @@ public class DataManager : MonoBehaviour
     public int pineappleFruit;
     public int blueberryFruit;
 
+    public bool isFirstPrep = false;
     [SerializeField] TextMeshProUGUI displayStrawberryContena;
     [SerializeField] TextMeshProUGUI displayGrapeContena;
     [SerializeField] TextMeshProUGUI displayOrangeContena;
