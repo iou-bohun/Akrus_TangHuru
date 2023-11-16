@@ -86,7 +86,6 @@ public class ContainerManager : MonoBehaviour
         bColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
         blueberryFirst.colors = sColor;
 
-        //selectedFirst = EventSystem.current.currentSelectedGameObject;
         selectedFirst = isChoose? EventSystem.current.currentSelectedGameObject : null; 
 
 

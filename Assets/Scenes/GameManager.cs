@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-   private static GameManager instance;
+    private static GameManager instance;
    
     
     private void Awake()
@@ -31,5 +31,15 @@ public class GameManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    private void Start()
+    {
+        Invoke("SceneChanger", 3f);
+    }
+
+    public void SceneChanger()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

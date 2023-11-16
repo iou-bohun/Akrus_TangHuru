@@ -44,7 +44,7 @@ public class DataManager : MonoBehaviour
     public int sellingPineappleTangHuru = 0;
     public int SellingBlueberryTangHuru = 0;
 
-
+    public bool isGame = false;
     public bool isFirstPrep = false;
     [SerializeField] TextMeshProUGUI displayStrawberryContena;
     [SerializeField] TextMeshProUGUI displayGrapeContena;
