@@ -5,33 +5,37 @@ using UnityEngine;
 
 public class ProcessingFruit : MonoBehaviour
 {
-    SpriteRenderer thisSprite;
-    [SerializeField] Sprite[] CotingTangHuru;
-    public   GameObject processingFruit;
+    public GameObject fruit;
+    SpriteRenderer chlidrenSprite;
+    [SerializeField] Sprite[] sprite;
 
-    private void Start()
+    private void Awake()
     {
-        thisSprite = GetComponent<SpriteRenderer>();
+        chlidrenSprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
+       if(DataManager.Instance.selectedFruit == FruitType.Strawberry)
+        {
+            fruit.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);   
+        }
+        else
+        {
+            fruit.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        }
       if(DataManager.Instance.isFruitAvaliable == true)
         {
             SetPrecessingFruitActive(true);
+            chlidrenSprite.sprite = sprite[(int)DataManager.Instance.selectedFruit];
         }
         else
         {
             SetPrecessingFruitActive(false);
         }
     }
-
-
     void SetPrecessingFruitActive(bool isActive)
     {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(isActive);
-        }
+           fruit.gameObject.SetActive(isActive);
     }
 }
