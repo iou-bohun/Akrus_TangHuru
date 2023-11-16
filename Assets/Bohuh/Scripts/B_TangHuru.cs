@@ -86,7 +86,7 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position = 
                 new Vector3(strawberryContainer.transform.position.x, strawberryContainer.transform.position.y, strawberryContainer.transform.position.z);
-            DataManager.Instance.strawberryTangHuru++;
+            DataManager.Instance.TangCounts[FruitType.Strawberry]++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
@@ -95,7 +95,7 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position =
                 new Vector3(grapeContainer.transform.position.x, grapeContainer.transform.position.y, grapeContainer.transform.position.z);
-            DataManager.Instance.grapeTangHuru++;
+            DataManager.Instance.TangCounts[FruitType.Grape]++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
@@ -104,7 +104,7 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position =
                 new Vector3(orangeContainer.transform.position.x, orangeContainer.transform.position.y, orangeContainer.transform.position.z);
-            DataManager.Instance.orangeTangHuru++;
+            DataManager.Instance.TangCounts[FruitType.orange]++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
@@ -113,7 +113,7 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position =
                 new Vector3(pineappleContainer.transform.position.x, pineappleContainer.transform.position.y, pineappleContainer.transform.position.z);
-            DataManager.Instance.pineappleTangHuru++;
+            DataManager.Instance.TangCounts[FruitType.pineapple]++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }
@@ -122,7 +122,7 @@ public class B_TangHuru : MonoBehaviour
         {
             this.transform.position =
                 new Vector3(blueberryContainer.transform.position.x, blueberryContainer.transform.position.y, blueberryContainer.transform.position.z);
-            DataManager.Instance.blueberryTangHuru++;
+            DataManager.Instance.TangCounts[FruitType.blueberry]++;
             this.gameObject.SetActive(false);
             thisPosition.GetComponent<B_SpawnPoint>().IsPlaceable = true;
         }

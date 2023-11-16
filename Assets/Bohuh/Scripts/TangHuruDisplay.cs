@@ -20,13 +20,14 @@ public class TangHuruDisplay : MonoBehaviour
             StartCoroutine("AlertDelay");
             return;
         }
-        if (DataManager.Instance.strawberryTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.Strawberry] >= 1)
         {
             SoundManager.Instance.PlayTapSound();
-            DataManager.Instance.strawberryTangHuru--;
+            DataManager.Instance.TangCounts[FruitType.Strawberry]--;
             DataManager.Instance.sellingStarwberryTangHuru++;
             Debug.Log("社発");
-            Instantiate(prefab[0], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            GameObject sellTang =  Instantiate(prefab[0], spawnPoints[DataManager.Instance.TangCounts[FruitType.Strawberry]].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
@@ -40,13 +41,14 @@ public class TangHuruDisplay : MonoBehaviour
             StartCoroutine("AlertDelay");
             return;
         }
-        if (DataManager.Instance.grapeTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.Grape] >= 1)
         {
             SoundManager.Instance.PlayTapSound();
-            DataManager.Instance.grapeTangHuru--;
+            DataManager.Instance.TangCounts[FruitType.Grape]--;
             DataManager.Instance.sellingGrapeTangHuru++;
             Debug.Log("社発");
-            Instantiate(prefab[1], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            GameObject sellTang = Instantiate(prefab[1], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
@@ -60,13 +62,14 @@ public class TangHuruDisplay : MonoBehaviour
             StartCoroutine("AlertDelay");
             return;
         }
-        if (DataManager.Instance.orangeTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.orange] >= 1)
         {
             SoundManager.Instance.PlayTapSound();
-            DataManager.Instance.orangeTangHuru--;
+            DataManager.Instance.TangCounts[FruitType.orange]--;
             DataManager.Instance.sellingOrangeTangHuru++;
             Debug.Log("社発");
-            Instantiate(prefab[2], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            GameObject sellTang = Instantiate(prefab[2], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
@@ -80,13 +83,14 @@ public class TangHuruDisplay : MonoBehaviour
             StartCoroutine("AlertDelay");
             return;
         }
-        if (DataManager.Instance.pineappleTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.pineapple] >= 1)
         {
             SoundManager.Instance.PlayTapSound();
-            DataManager.Instance.pineappleTangHuru--;
+            DataManager.Instance.TangCounts[FruitType.pineapple]--;
             DataManager.Instance.sellingPineappleTangHuru++;
             Debug.Log("社発");
-            Instantiate(prefab[3], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            GameObject sellTang = Instantiate(prefab[3], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
@@ -100,13 +104,14 @@ public class TangHuruDisplay : MonoBehaviour
             StartCoroutine("AlertDelay");
             return;
         }
-        if (DataManager.Instance.blueberryTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.blueberry] >= 1)
         {
             SoundManager.Instance.PlayTapSound();
-            DataManager.Instance.blueberryTangHuru--;
+            DataManager.Instance.TangCounts[FruitType.blueberry]--;
             DataManager.Instance.SellingBlueberryTangHuru++;
             Debug.Log("社発");
-            Instantiate(prefab[4], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            GameObject sellTang = Instantiate(prefab[4], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }

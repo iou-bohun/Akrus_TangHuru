@@ -14,7 +14,6 @@ public class AKuMove : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(originalPosition);
         transform.Translate(Vector3.right * speed * Time.deltaTime);
        MoveToOrigin();
     }

@@ -22,7 +22,7 @@ public class B_RestingContainer : MonoBehaviour
 
     private void sUpdate()
     {
-        if (DataManager.Instance.strawberryTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.Strawberry] >= 1)
         {
             strawberryTangHuru.SetActive(true);
         }
@@ -33,7 +33,7 @@ public class B_RestingContainer : MonoBehaviour
       }
        private void gUpdate()
         {
-            if (DataManager.Instance.grapeTangHuru >= 1)
+            if (DataManager.Instance.TangCounts[FruitType.Grape] >= 1)
             {
             grapeTang.SetActive(true);
             }
@@ -44,7 +44,7 @@ public class B_RestingContainer : MonoBehaviour
         }
     private void oUpdate()
     {
-        if (DataManager.Instance.orangeTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.orange] >= 1)
         {
             orangeTang.SetActive(true);
         }
@@ -55,7 +55,7 @@ public class B_RestingContainer : MonoBehaviour
     }
     private void pUpdate()
     {
-        if (DataManager.Instance.pineappleTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.pineapple] >= 1)
         {
             pineappaleTang.SetActive(true);
         }
@@ -66,7 +66,7 @@ public class B_RestingContainer : MonoBehaviour
     }
     private void bUpdate()
     {
-        if (DataManager.Instance.blueberryTangHuru >= 1)
+        if (DataManager.Instance.TangCounts[FruitType.blueberry] >= 1)
         {
             blueberryTang.SetActive(true);
         }
