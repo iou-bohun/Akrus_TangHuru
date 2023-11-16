@@ -1,14 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AkuBuy : MonoBehaviour
 {
+    public TMP_Text levelUIText;
+    public TMP_Text levelText;
+    public TMP_Text expText;
+
+    [SerializeField] UnityEngine.UI.Slider expbar;
     [SerializeField] float speed = 100;
+
     Vector2 originalPosition;
     Animator anim;
+
+    float maxExp = 3;
+    float curExp = 0;
+
+    public int level = 1;
+
     enum akuStatus { up=0, wating=1, right}
     int dir;
+
+
     private void Awake()
     {
         originalPosition = this.transform.localPosition;
@@ -18,6 +33,7 @@ public class AkuBuy : MonoBehaviour
     private void Start()
     {
         dir = (int)akuStatus.up;
+        expbar.value = (float)curExp / (float)maxExp; // Exp의 값을 0/100 으로 시작
     }
 
     private void Update()
@@ -38,6 +54,7 @@ public class AkuBuy : MonoBehaviour
             dir = (int)akuStatus.right;
             B_GameManager.Instance.isBuyReady = false;
             B_GameManager.Instance.buySuccess = false;
+            HandleExp();
         }
     }
 
@@ -67,5 +84,31 @@ public class AkuBuy : MonoBehaviour
         dir = (int)akuStatus.wating;
         anim.SetBool("buying", true);
         B_GameManager.Instance.isBuyReady = true;
+    }
+
+
+    private void HandleExp()
+    {
+        Debug.Log("경험치 증가");
+        curExp += 1;
+
+        expbar.value = (float)curExp / (float)maxExp; // Handle의 값 0/100
+
+        if (expbar.value >= 1)
+        {
+            expbar.value = expbar.value - 1;
+            level++;
+            levelUIText.text = level.ToString();
+            levelText.text = level.ToString();
+
+            if (level <= 6)
+            {
+                maxExp += 5;
+            }
+            else
+                maxExp += 6;
+        }
+
+        expText.text = curExp.ToString() + "/" + maxExp.ToString();
     }
 }
