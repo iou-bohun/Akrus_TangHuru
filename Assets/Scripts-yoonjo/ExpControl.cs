@@ -14,8 +14,8 @@ public class ExpControl : MonoBehaviour
     [SerializeField] //외부스크립트에서 수정을 하지 못하게 하는 변수(insfactor에서는 접근가능)
     private Slider expbar;
 
-    public float maxExp = 3;  //Exp의 max를 100으로 설정
-    public float curExp = 0; //Exp의 초기값을 0으로 설정
+    private float maxExp = 3;  //Exp의 max를 100으로 설정
+    private float curExp = 0; //Exp의 초기값을 0으로 설정
 
     public int level = 1;
 
@@ -36,7 +36,7 @@ public class ExpControl : MonoBehaviour
 
         Handle();
     }
-    public void Handle()
+    private void Handle()
     {
         expbar.value = (float)curExp / (float)maxExp; //Handle의 값 0/100
 

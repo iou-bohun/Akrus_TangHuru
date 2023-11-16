@@ -7,52 +7,65 @@ public class AkuBuy : MonoBehaviour
     [SerializeField] float speed = 100;
     Vector2 originalPosition;
     Animator anim;
-
+    enum akuStatus { up=0, wating=1, right}
+    int dir;
     private void Awake()
     {
         originalPosition = this.transform.localPosition;
         anim = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        dir = (int)akuStatus.up;
+    }
+
     private void Update()
     {
-        AkuBuyProcess();
-        MoveToOrigin();
+        AkuMove();
         AkuBuySuccess();
-    }
-
-    void AkuBuyProcess()
-    {
-        if (transform.position.y<0)
+        if(transform.localPosition.x > 8)
         {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
-        //야쿠루가 구매하는 장소에 도착했을때 
-        if (transform.localPosition.y > 0)
-        {
-            //이동 멈추기 
-            speed = 0;
-            //애니메이션 전환
-            anim.SetBool("buying", true);
-            // 구매 시작
-            B_GameManager.Instance.isBuyReady = true;
+            MoveToOrigin();
         }
     }
-
+   
     void AkuBuySuccess()
     {
         if (B_GameManager.Instance.buySuccess)
         {
-            speed = 100;
-            transform.Translate(Vector3.right * speed * Time.deltaTime);    
             anim.SetBool("buying", false);
+            dir = (int)akuStatus.right;
+            B_GameManager.Instance.isBuyReady = false;
+            B_GameManager.Instance.buySuccess = false;
+        }
+    }
+
+    void AkuMove()
+    {
+        switch (dir)
+        {
+            case (int)akuStatus.up:
+                transform.Translate(Vector3.up*speed * Time.deltaTime);
+                break;
+            case (int)akuStatus.wating:
+                break;
+            case (int)akuStatus.right:
+                transform.Translate(Vector3.right*speed * Time.deltaTime);
+                break;
         }
     }
 
     void MoveToOrigin()
     {
-        // 야쿠루가 구매를 다 하고 이동했을때 
-        //transform.localPosition = originalPosition;
-       // speed = 100;
+        transform.localPosition = originalPosition;
+        dir = (int)akuStatus.up;    
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        dir = (int)akuStatus.wating;
+        anim.SetBool("buying", true);
+        B_GameManager.Instance.isBuyReady = true;
     }
 }

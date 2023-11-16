@@ -58,8 +58,9 @@ public class SellingProgressBar : MonoBehaviour
         {
             curTime = (float)maxTime;
             slider.gameObject.SetActive(false);
-            Debug.Log("골듲ㅇ가");
+            Debug.Log("골드증가");
             DataManager.Instance.Deposit(100);
+            DataManager.Instance.sellingTangHuru--;
             B_GameManager.Instance.isBuyReady = false;
             B_GameManager.Instance.buySuccess = true;
             foreach (var tangHuru in DataManager.Instance.sellingTanghurus)
@@ -67,7 +68,6 @@ public class SellingProgressBar : MonoBehaviour
                 DataManager.Instance.sellingTanghurus.Remove(tangHuru);
                 Destroy(tangHuru);
             }
-            HandleExp(); // 경험치 및 레벨 관련 기능 호출
         }
     }
 
