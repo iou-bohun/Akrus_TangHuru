@@ -62,7 +62,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayBlueberryTanghuru;
     public bool isFruitAvaliable = false;
     public List<FruitType> avaliableFruits = new List<FruitType>();
-    public List<GameObject> sellingTanghurus = new List<GameObject>();
+    public Stack<GameObject> sellingTanghurus = new Stack<GameObject>();
 
     float strawberryPrepTime = 30f;
     float grapePrepTime = 30f;

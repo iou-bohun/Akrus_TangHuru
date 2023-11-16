@@ -55,8 +55,8 @@ public class SellingProgressBar : MonoBehaviour
             B_GameManager.Instance.buySuccess = true;
             foreach (var tangHuru in DataManager.Instance.sellingTanghurus)
             {
-                DataManager.Instance.sellingTanghurus.Remove(tangHuru);
-                Destroy(tangHuru);
+                GameObject obf = DataManager.Instance.sellingTanghurus.Pop();
+                Destroy(obf);
             }
         }
     }

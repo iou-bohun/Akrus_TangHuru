@@ -13,7 +13,7 @@ public class TangHuruDisplay : MonoBehaviour
     public  void DisplayStrawberryTangHuru()
     {
         SoundManager.Instance.PlayTapSound();
-        if (DataManager.Instance.sellingTangHuru >= 6)
+        if (DataManager.Instance.sellingTangHuru >= 3)
         {
             Debug.Log("판매대가 모자랍니다");
             alert.SetActive(true);
@@ -25,15 +25,15 @@ public class TangHuruDisplay : MonoBehaviour
             SoundManager.Instance.PlayTapSound();
             DataManager.Instance.TangCounts[FruitType.Strawberry]--;
             DataManager.Instance.sellingStarwberryTangHuru++;
-            GameObject sellTang =  Instantiate(prefab[0], spawnPoints[DataManager.Instance.TangCounts[FruitType.Strawberry]].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
-            DataManager.Instance.sellingTanghurus.Add(sellTang);
+            GameObject sellTang =  Instantiate(prefab[0], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
+            DataManager.Instance.sellingTanghurus.Push(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
     public void DisplayGrapeTangHuru()
     {
         SoundManager.Instance.PlayTapSound();
-        if (DataManager.Instance.sellingTangHuru >= 6)
+        if (DataManager.Instance.sellingTangHuru >= 3)
         {
             Debug.Log("판매대가 모자랍니다");
             alert.SetActive(true);
@@ -47,14 +47,14 @@ public class TangHuruDisplay : MonoBehaviour
             DataManager.Instance.sellingGrapeTangHuru++;
             Debug.Log("소환");
             GameObject sellTang = Instantiate(prefab[1], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
-            DataManager.Instance.sellingTanghurus.Add(sellTang);
+            DataManager.Instance.sellingTanghurus.Push(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
     public void DisplayOrangeTangHuru()
     {
         SoundManager.Instance.PlayTapSound();
-        if (DataManager.Instance.sellingTangHuru >= 6)
+        if (DataManager.Instance.sellingTangHuru >= 3)
         {
             Debug.Log("판매대가 모자랍니다");
             alert.SetActive(true);
@@ -68,14 +68,14 @@ public class TangHuruDisplay : MonoBehaviour
             DataManager.Instance.sellingOrangeTangHuru++;
             Debug.Log("소환");
             GameObject sellTang = Instantiate(prefab[2], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
-            DataManager.Instance.sellingTanghurus.Add(sellTang);
+            DataManager.Instance.sellingTanghurus.Push(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
     public void DispalyPineappleTangHuru()
     {
         SoundManager.Instance.PlayTapSound();
-        if (DataManager.Instance.sellingTangHuru >= 6)
+        if (DataManager.Instance.sellingTangHuru >= 3)
         {
             Debug.Log("판매대가 모자랍니다");
             alert.SetActive(true);
@@ -89,7 +89,7 @@ public class TangHuruDisplay : MonoBehaviour
             DataManager.Instance.sellingPineappleTangHuru++;
             Debug.Log("소환");
             GameObject sellTang = Instantiate(prefab[3], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
-            DataManager.Instance.sellingTanghurus.Add(sellTang);
+            DataManager.Instance.sellingTanghurus.Push(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
@@ -109,7 +109,7 @@ public class TangHuruDisplay : MonoBehaviour
             DataManager.Instance.TangCounts[FruitType.blueberry]--;
             DataManager.Instance.SellingBlueberryTangHuru++;
             GameObject sellTang = Instantiate(prefab[4], spawnPoints[DataManager.Instance.sellingTangHuru].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
-            DataManager.Instance.sellingTanghurus.Add(sellTang);
+            DataManager.Instance.sellingTanghurus.Push(sellTang);
             DataManager.Instance.sellingTangHuru++;
         }
     }
