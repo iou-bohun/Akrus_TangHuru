@@ -19,6 +19,7 @@ public class AkuBuy : MonoBehaviour
     float curExp = 0;
 
     public int level = 1;
+    bool check =false;
 
     enum akuStatus { up=0, wating=1, right}
     int dir;
@@ -47,8 +48,10 @@ public class AkuBuy : MonoBehaviour
    
     void AkuBuySuccess()
     {
+        if (check == false) return;
         if (B_GameManager.Instance.buySuccess)
         {
+            
             anim.SetBool("buying", false);
             dir = (int)akuStatus.right;
             B_GameManager.Instance.isBuyReady = false;
@@ -76,6 +79,7 @@ public class AkuBuy : MonoBehaviour
     {
         transform.localPosition = originalPosition;
         dir = (int)akuStatus.up;    
+        check = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -83,6 +87,7 @@ public class AkuBuy : MonoBehaviour
         dir = (int)akuStatus.wating;
         anim.SetBool("buying", true);
         B_GameManager.Instance.isBuyReady = true;
+        check = true;
     }
 
 
