@@ -1316,12 +1316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb54096fc51e484bb1e32951928cd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUIText: {fileID: 1341369868}
-  levelText: {fileID: 331602809}
-  expText: {fileID: 1996654905}
   slider: {fileID: 1756796369}
-  expbar: {fileID: 1201782599}
-  level: 1
 --- !u!1 &100379960
 GameObject:
   m_ObjectHideFlags: 0
@@ -20930,7 +20925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde24c2bec9d7da489020bbac0efe0df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelUIText: {fileID: 1341369868}
+  levelText: {fileID: 331602809}
+  expText: {fileID: 1996654905}
+  expbar: {fileID: 1201782599}
   speed: 100
+  level: 1
 --- !u!212 &1085922411
 SpriteRenderer:
   m_ObjectHideFlags: 0

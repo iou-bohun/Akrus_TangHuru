@@ -9,25 +9,15 @@ using System;
 
 public class SellingProgressBar : MonoBehaviour
 {
-    public TMP_Text levelUIText;
-    public TMP_Text levelText;
-    public TMP_Text expText;
 
     [SerializeField] UnityEngine.UI.Slider slider;
-    [SerializeField] UnityEngine.UI.Slider expbar;
 
     float curTime = 30;
     float maxTime = 30;
 
-    float maxExp = 3;
-    float curExp = 0;
-
-    public int level = 1;
-
     private void OnEnable()
     {
         curTime = (float)maxTime;
-        expbar.value = (float)curExp / (float)maxExp; // Exp의 값을 0/100으로 시작
     }
 
     private void Update()
@@ -69,30 +59,5 @@ public class SellingProgressBar : MonoBehaviour
                 Destroy(tangHuru);
             }
         }
-    }
-
-    private void HandleExp()
-    {
-        Debug.Log("경험치 증가");
-        curExp += 1;
-
-        expbar.value = (float)curExp / (float)maxExp; // Handle의 값 0/100
-
-        if (expbar.value >= 1)
-        {
-            expbar.value = expbar.value - 1;
-            level++;
-            levelUIText.text = level.ToString();
-            levelText.text = level.ToString();
-
-            if (level <= 6)
-            {
-                maxExp += 5;
-            }
-            else
-                maxExp += 6;
-        }
-
-        expText.text = curExp.ToString() + "/" + maxExp.ToString();
     }
 }
