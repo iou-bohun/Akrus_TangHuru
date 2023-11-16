@@ -96,7 +96,7 @@ public class TangHuruDisplay : MonoBehaviour
     public void DisaplyBlueberryTangHuru()
     {
         SoundManager.Instance.PlayTapSound();
-        if (DataManager.Instance.sellingTangHuru >= 6)
+        if (DataManager.Instance.sellingTangHuru >= 3)
         {
             Debug.Log("판매대가 모자랍니다");
             alert.SetActive(true);
