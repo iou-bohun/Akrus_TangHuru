@@ -25,7 +25,6 @@ public class TangHuruDisplay : MonoBehaviour
             SoundManager.Instance.PlayTapSound();
             DataManager.Instance.TangCounts[FruitType.Strawberry]--;
             DataManager.Instance.sellingStarwberryTangHuru++;
-            Debug.Log("º“»Ø");
             GameObject sellTang =  Instantiate(prefab[0], spawnPoints[DataManager.Instance.TangCounts[FruitType.Strawberry]].position, spawnPoints[DataManager.Instance.sellingTangHuru].rotation);
             DataManager.Instance.sellingTanghurus.Add(sellTang);
             DataManager.Instance.sellingTangHuru++;
