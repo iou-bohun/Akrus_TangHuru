@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum FruitType
@@ -28,22 +27,28 @@ public class DataManager : MonoBehaviour
     public FruitType selectedFruit;
     public FruitType growFruit; // �ڶ�� ���� ����
 
-    public Dictionary<FruitType, int> TangCounts = new Dictionary<FruitType, int>
-    {
-         {FruitType.Strawberry,0},
-        {FruitType.Grape,0},
-        {FruitType.orange,0},
-        {FruitType.pineapple,0},
-        {FruitType.blueberry,0},
-    };
-
     public int sellingTangHuru = 0;
+
+    public int strawberryTangHuru;
+    public int grapeTangHuru;
+    public int orangeTangHuru;
+    public int pineappleTangHuru;
+    public int blueberryTangHuru;
+
     public int sellingStarwberryTangHuru=0;
     public int sellingGrapeTangHuru = 0;
     public int sellingOrangeTangHuru = 0;
     public int sellingPineappleTangHuru = 0;
     public int SellingBlueberryTangHuru = 0;
 
+    // �����̳�
+    public int strawberryFruit;
+    public int grapeFruit;
+    public int orangeFruit;
+    public int pineappleFruit;
+    public int blueberryFruit;
+
+    public bool isFirstPrep = false;
     [SerializeField] TextMeshProUGUI displayStrawberryContena;
     [SerializeField] TextMeshProUGUI displayGrapeContena;
     [SerializeField] TextMeshProUGUI displayOrangeContena;
@@ -60,7 +65,6 @@ public class DataManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayBlueberryTanghuru;
     public bool isFruitAvaliable = false;
     public List<FruitType> avaliableFruits = new List<FruitType>();
-    public List<GameObject> sellingTanghurus = new List<GameObject>();
 
     float strawberryPrepTime = 30f;
     float grapePrepTime = 30f;
@@ -134,11 +138,11 @@ public class DataManager : MonoBehaviour
     /// </summary>
     void UpdateStarawberryTangHuru()
     {
-        displayStarwberryTangHuru.text = TangCounts[FruitType.Strawberry].ToString();
-        displayGrapeTanghuru.text  = TangCounts[FruitType.Grape].ToString();
-        displayOrangeTanghuru.text = TangCounts[FruitType.orange].ToString();
-        displayPineappleTanghuru.text = TangCounts[FruitType.pineapple].ToString();
-        displayBlueberryTanghuru.text = TangCounts[FruitType.blueberry].ToString();
+        displayStarwberryTangHuru.text = strawberryTangHuru.ToString();
+        displayGrapeTanghuru.text  = grapeTangHuru.ToString();
+        displayOrangeTanghuru.text = orangeTangHuru.ToString();
+        displayPineappleTanghuru.text = pineappleTangHuru.ToString();
+        displayBlueberryTanghuru.text = blueberryTangHuru.ToString();
     }
     
     void ContenaDisplay()

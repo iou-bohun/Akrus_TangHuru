@@ -4,17 +4,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Container : MonoBehaviour, IPointerClickHandler
+public class Container : MonoBehaviour
 {
     public static Container instance;
-    int strawberryNum;
-    int orangeNum;
-    int pineappleNum;
-    int grapeNum;
-    int blueberryNum;
+    [SerializeField] Button strawberryFirst;
+    [SerializeField] Button grapeFirst;
+    [SerializeField] Button orangeFirst;
+    [SerializeField] Button pineappleFirst;
+    [SerializeField] Button blueberryFirst;
+    private bool isChoose = false;
 
+    private ColorBlock sColor;
+    private ColorBlock gColor;
+    private ColorBlock oColor;
+    private ColorBlock pColor;
+    private ColorBlock bColor;
 
-
+    public GameObject selectedFirst;
 
     private void Awake()
     {
@@ -27,6 +33,11 @@ public class Container : MonoBehaviour, IPointerClickHandler
         {
             Destroy(this.gameObject);
         }
+        sColor = strawberryFirst.colors;
+        gColor = grapeFirst.colors;
+        oColor = orangeFirst.colors;
+        pColor = pineappleFirst.colors;
+        bColor = blueberryFirst.colors;
     }
 
     public static Container Instance 
@@ -39,38 +50,35 @@ public class Container : MonoBehaviour, IPointerClickHandler
             }
             return instance;
         }
-    
     }
 
-
-    void Start()
+    public void OnButtonClick()
     {
-        
-    }
+        Debug.Log(DataManager.Instance.isFirstPrep);
+        isChoose = !isChoose;
+        DataManager.Instance.isFirstPrep = !DataManager.Instance.isFirstPrep;
 
-    void Update()
-    {
-        
-    }
+        sColor.normalColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        sColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        strawberryFirst.colors = sColor;
 
-    public void Harvest()
-    {
+        gColor.normalColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        gColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        grapeFirst.colors = sColor;
 
-    }
+        oColor.normalColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        oColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        orangeFirst.colors = sColor;
 
+        pColor.normalColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        pColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        pineappleFirst.colors = sColor;
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        /*
-        Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hitInfo = Physics2D.Raycast(touchPos, Camera.main.transform.forward);
-        if(hitInfo.collider != null)
-        {
-            GameObject touchFruit = hitInfo.transform.gameObject;
-        }
-        Debug.Log(gameObject.name(touchFruit));*/
-        string curName = EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log(curName);
-        //throw new System.NotImplementedException();
+        bColor.normalColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        bColor.selectedColor = isChoose ? new Color(0.8f, 0.8f, 0.8f, 1f) : Color.white;
+        blueberryFirst.colors = sColor;
+
+        selectedFirst = EventSystem.current.currentSelectedGameObject;
+        Debug.Log(selectedFirst);
     }
 }
