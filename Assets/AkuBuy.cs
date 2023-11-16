@@ -23,7 +23,6 @@ public class AkuBuy : MonoBehaviour
     enum akuStatus { up=0, wating=1, right}
     int dir;
 
-
     private void Awake()
     {
         originalPosition = this.transform.localPosition;
@@ -33,7 +32,7 @@ public class AkuBuy : MonoBehaviour
     private void Start()
     {
         dir = (int)akuStatus.up;
-        expbar.value = (float)curExp / (float)maxExp; // ExpÀÇ °ªÀ» 0/100 À¸·Î ½ÃÀÛ
+        expbar.value = (float)curExp / (float)maxExp; // Expï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0/100 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 
     private void Update()
@@ -89,10 +88,10 @@ public class AkuBuy : MonoBehaviour
 
     private void HandleExp()
     {
-        Debug.Log("°æÇèÄ¡ Áõ°¡");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½");
         curExp += 1;
 
-        expbar.value = (float)curExp / (float)maxExp; // HandleÀÇ °ª 0/100
+        expbar.value = (float)curExp / (float)maxExp; // Handleï¿½ï¿½ ï¿½ï¿½ 0/100
 
         if (expbar.value >= 1)
         {
