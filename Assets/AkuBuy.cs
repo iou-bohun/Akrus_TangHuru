@@ -9,6 +9,7 @@ public class AkuBuy : MonoBehaviour
     Animator anim;
     enum akuStatus { up=0, wating=1, right}
     int dir;
+
     private void Awake()
     {
         originalPosition = this.transform.localPosition;
